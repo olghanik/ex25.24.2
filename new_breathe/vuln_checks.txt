@@ -1,0 +1,556 @@
+=== Начало проверки аномалий ===
+=== Проверка утечки версий сервера ===
+Exploits: No Results
+Shellcodes: No Results
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Host www.capitalone.com:443 was resolved.
+* IPv6: (none)
+* IPv4: 92.123.103.58, 92.123.103.82
+*   Trying 92.123.103.58:443...
+* Connected to www.capitalone.com (92.123.103.58) port 443
+* ALPN: curl offers h2,http/1.1
+} [5 bytes data]
+* TLSv1.3 (OUT), TLS handshake, Client hello (1):
+} [512 bytes data]
+*  CAfile: /etc/ssl/certs/ca-certificates.crt
+*  CApath: /etc/ssl/certs
+{ [5 bytes data]
+* TLSv1.3 (IN), TLS handshake, Server hello (2):
+{ [122 bytes data]
+* TLSv1.3 (IN), TLS handshake, Encrypted Extensions (8):
+{ [29 bytes data]
+* TLSv1.3 (IN), TLS handshake, Certificate (11):
+{ [2494 bytes data]
+* TLSv1.3 (IN), TLS handshake, CERT verify (15):
+{ [80 bytes data]
+* TLSv1.3 (IN), TLS handshake, Finished (20):
+{ [52 bytes data]
+* TLSv1.3 (OUT), TLS change cipher, Change cipher spec (1):
+} [1 bytes data]
+* TLSv1.3 (OUT), TLS handshake, Finished (20):
+} [52 bytes data]
+* SSL connection using TLSv1.3 / TLS_AES_256_GCM_SHA384 / X25519 / id-ecPublicKey
+* ALPN: server accepted h2
+* Server certificate:
+*  subject: jurisdictionC=US; jurisdictionST=Delaware; businessCategory=Private Organization; serialNumber=2419959; C=US; ST=Virginia; L=McLean; postalCode=22102; street=1680 Capital One Dr; O=Capital One Financial Corporation; CN=www.capitalone.com
+*  start date: Jan 17 00:00:00 2025 GMT
+*  expire date: Jan 16 23:59:59 2026 GMT
+*  subjectAltName: host "www.capitalone.com" matched cert's "www.capitalone.com"
+*  issuer: C=US; O=DigiCert Inc; CN=DigiCert Global G3 TLS ECC SHA384 2020 CA1
+*  SSL certificate verify ok.
+*   Certificate level 0: Public key type EC/prime256v1 (256/128 Bits/secBits), signed using ecdsa-with-SHA384
+*   Certificate level 1: Public key type EC/secp384r1 (384/192 Bits/secBits), signed using ecdsa-with-SHA384
+*   Certificate level 2: Public key type EC/secp384r1 (384/192 Bits/secBits), signed using ecdsa-with-SHA384
+} [5 bytes data]
+* using HTTP/2
+* [HTTP/2] [1] OPENED stream for https://www.capitalone.com/admin/__init__.py
+* [HTTP/2] [1] [:method: GET]
+* [HTTP/2] [1] [:scheme: https]
+* [HTTP/2] [1] [:authority: www.capitalone.com]
+* [HTTP/2] [1] [:path: /admin/__init__.py]
+* [HTTP/2] [1] [user-agent: curl/8.5.0]
+* [HTTP/2] [1] [accept: */*]
+} [5 bytes data]
+> GET /admin/__init__.py HTTP/2
+> Host: www.capitalone.com
+> User-Agent: curl/8.5.0
+> Accept: */*
+> 
+{ [5 bytes data]
+* TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+{ [265 bytes data]
+* TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+{ [265 bytes data]
+* old SSL session ID is stale, removing
+{ [5 bytes data]
+  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0< HTTP/2 404 
+< accept-ranges: bytes
+< content-length: 100
+< content-type: text/html
+< etag: "d4bf94aec16315618161101efa9d048d:1666125989.803706"
+< last-modified: Mon, 26 Sep 2022 16:43:26 GMT
+< server: AkamaiNetStorage
+< expires: Fri, 20 Jun 2025 15:52:42 GMT
+< cache-control: max-age=0, no-cache, no-store
+< pragma: no-cache
+< date: Fri, 20 Jun 2025 15:52:42 GMT
+< 
+{ [100 bytes data]
+100   100  100   100    0     0     72      0  0:00:01  0:00:01 --:--:--    72
+* Connection #0 to host www.capitalone.com left intact
+<html><head><meta http-equiv="refresh" content="0; url=/page-not-found/"></head><body></body></html>  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Host www.capitalone.com:443 was resolved.
+* IPv6: (none)
+* IPv4: 92.123.103.58, 92.123.103.82
+*   Trying 92.123.103.58:443...
+* Connected to www.capitalone.com (92.123.103.58) port 443
+* ALPN: curl offers h2,http/1.1
+} [5 bytes data]
+* TLSv1.3 (OUT), TLS handshake, Client hello (1):
+} [512 bytes data]
+*  CAfile: /etc/ssl/certs/ca-certificates.crt
+*  CApath: /etc/ssl/certs
+{ [5 bytes data]
+* TLSv1.3 (IN), TLS handshake, Server hello (2):
+{ [122 bytes data]
+* TLSv1.3 (IN), TLS handshake, Encrypted Extensions (8):
+{ [29 bytes data]
+* TLSv1.3 (IN), TLS handshake, Certificate (11):
+{ [2494 bytes data]
+* TLSv1.3 (IN), TLS handshake, CERT verify (15):
+{ [80 bytes data]
+* TLSv1.3 (IN), TLS handshake, Finished (20):
+{ [52 bytes data]
+* TLSv1.3 (OUT), TLS change cipher, Change cipher spec (1):
+} [1 bytes data]
+* TLSv1.3 (OUT), TLS handshake, Finished (20):
+} [52 bytes data]
+* SSL connection using TLSv1.3 / TLS_AES_256_GCM_SHA384 / X25519 / id-ecPublicKey
+* ALPN: server accepted h2
+* Server certificate:
+*  subject: jurisdictionC=US; jurisdictionST=Delaware; businessCategory=Private Organization; serialNumber=2419959; C=US; ST=Virginia; L=McLean; postalCode=22102; street=1680 Capital One Dr; O=Capital One Financial Corporation; CN=www.capitalone.com
+*  start date: Jan 17 00:00:00 2025 GMT
+*  expire date: Jan 16 23:59:59 2026 GMT
+*  subjectAltName: host "www.capitalone.com" matched cert's "www.capitalone.com"
+*  issuer: C=US; O=DigiCert Inc; CN=DigiCert Global G3 TLS ECC SHA384 2020 CA1
+*  SSL certificate verify ok.
+*   Certificate level 0: Public key type EC/prime256v1 (256/128 Bits/secBits), signed using ecdsa-with-SHA384
+*   Certificate level 1: Public key type EC/secp384r1 (384/192 Bits/secBits), signed using ecdsa-with-SHA384
+*   Certificate level 2: Public key type EC/secp384r1 (384/192 Bits/secBits), signed using ecdsa-with-SHA384
+} [5 bytes data]
+* using HTTP/2
+* [HTTP/2] [1] OPENED stream for https://www.capitalone.com/api/__pycache__/
+* [HTTP/2] [1] [:method: GET]
+* [HTTP/2] [1] [:scheme: https]
+* [HTTP/2] [1] [:authority: www.capitalone.com]
+* [HTTP/2] [1] [:path: /api/__pycache__/]
+* [HTTP/2] [1] [user-agent: curl/8.5.0]
+* [HTTP/2] [1] [accept: */*]
+} [5 bytes data]
+> GET /api/__pycache__/ HTTP/2
+> Host: www.capitalone.com
+> User-Agent: curl/8.5.0
+> Accept: */*
+> 
+{ [5 bytes data]
+* TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+{ [265 bytes data]
+* TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+{ [265 bytes data]
+* old SSL session ID is stale, removing
+{ [5 bytes data]
+  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0< HTTP/2 404 
+< accept-ranges: bytes
+< content-length: 100
+< content-type: text/html
+< etag: "d4bf94aec16315618161101efa9d048d:1666125989.803706"
+< last-modified: Mon, 26 Sep 2022 16:43:26 GMT
+< server: AkamaiNetStorage
+< expires: Fri, 20 Jun 2025 15:52:43 GMT
+< cache-control: max-age=0, no-cache, no-store
+< pragma: no-cache
+< date: Fri, 20 Jun 2025 15:52:43 GMT
+< 
+{ [100 bytes data]
+100   100  100   100    0     0     76      0  0:00:01  0:00:01 --:--:--    76100   100  100   100    0     0     76      0  0:00:01  0:00:01 --:--:--    76
+* Connection #0 to host www.capitalone.com left intact
+<html><head><meta http-equiv="refresh" content="0; url=/page-not-found/"></head><body></body></html>
+
+
+=== Проверка MIME-Confusion ===
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Host www.capitalone.com:443 was resolved.
+* IPv6: (none)
+* IPv4: 92.123.103.58, 92.123.103.82
+*   Trying 92.123.103.58:443...
+* Connected to www.capitalone.com (92.123.103.58) port 443
+* ALPN: curl offers h2,http/1.1
+} [5 bytes data]
+* TLSv1.3 (OUT), TLS handshake, Client hello (1):
+} [512 bytes data]
+*  CAfile: /etc/ssl/certs/ca-certificates.crt
+*  CApath: /etc/ssl/certs
+{ [5 bytes data]
+* TLSv1.3 (IN), TLS handshake, Server hello (2):
+{ [122 bytes data]
+* TLSv1.3 (IN), TLS handshake, Encrypted Extensions (8):
+{ [29 bytes data]
+* TLSv1.3 (IN), TLS handshake, Certificate (11):
+{ [2494 bytes data]
+* TLSv1.3 (IN), TLS handshake, CERT verify (15):
+{ [78 bytes data]
+* TLSv1.3 (IN), TLS handshake, Finished (20):
+{ [52 bytes data]
+* TLSv1.3 (OUT), TLS change cipher, Change cipher spec (1):
+} [1 bytes data]
+* TLSv1.3 (OUT), TLS handshake, Finished (20):
+} [52 bytes data]
+* SSL connection using TLSv1.3 / TLS_AES_256_GCM_SHA384 / X25519 / id-ecPublicKey
+* ALPN: server accepted h2
+* Server certificate:
+*  subject: jurisdictionC=US; jurisdictionST=Delaware; businessCategory=Private Organization; serialNumber=2419959; C=US; ST=Virginia; L=McLean; postalCode=22102; street=1680 Capital One Dr; O=Capital One Financial Corporation; CN=www.capitalone.com
+*  start date: Jan 17 00:00:00 2025 GMT
+*  expire date: Jan 16 23:59:59 2026 GMT
+*  subjectAltName: host "www.capitalone.com" matched cert's "www.capitalone.com"
+*  issuer: C=US; O=DigiCert Inc; CN=DigiCert Global G3 TLS ECC SHA384 2020 CA1
+*  SSL certificate verify ok.
+*   Certificate level 0: Public key type EC/prime256v1 (256/128 Bits/secBits), signed using ecdsa-with-SHA384
+*   Certificate level 1: Public key type EC/secp384r1 (384/192 Bits/secBits), signed using ecdsa-with-SHA384
+*   Certificate level 2: Public key type EC/secp384r1 (384/192 Bits/secBits), signed using ecdsa-with-SHA384
+} [5 bytes data]
+* using HTTP/2
+* [HTTP/2] [1] OPENED stream for https://www.capitalone.com/api/account/validateLogin
+* [HTTP/2] [1] [:method: GET]
+* [HTTP/2] [1] [:scheme: https]
+* [HTTP/2] [1] [:authority: www.capitalone.com]
+* [HTTP/2] [1] [:path: /api/account/validateLogin]
+* [HTTP/2] [1] [user-agent: curl/8.5.0]
+* [HTTP/2] [1] [accept: text/html]
+} [5 bytes data]
+> GET /api/account/validateLogin HTTP/2
+> Host: www.capitalone.com
+> User-Agent: curl/8.5.0
+> Accept: text/html
+> 
+{ [5 bytes data]
+* TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+{ [265 bytes data]
+* TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+{ [265 bytes data]
+* old SSL session ID is stale, removing
+{ [5 bytes data]
+< HTTP/2 301 
+< content-length: 0
+< location: https://www.capitalone.com/api/account/validateLogin/
+< expires: Fri, 20 Jun 2025 15:52:43 GMT
+< cache-control: max-age=0, no-cache, no-store
+< pragma: no-cache
+< date: Fri, 20 Jun 2025 15:52:43 GMT
+< set-cookie: TLTUID=9FB2D4FD7CB27EB9B9AE5D1966432534; expires=Wed, 19-Jun-2030 15:52:43 GMT; path=/; domain=.capitalone.com; secure
+< set-cookie: TLTSID=A5C52B82CACAFF75526775E1850E2413; expires=Fri, 20-Jun-2025 17:52:43 GMT; path=/; domain=.capitalone.com; secure
+< 
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+* Connection #0 to host www.capitalone.com left intact
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Host www.capitalone.com:443 was resolved.
+* IPv6: (none)
+* IPv4: 92.123.103.82, 92.123.103.58
+*   Trying 92.123.103.82:443...
+* Connected to www.capitalone.com (92.123.103.82) port 443
+* ALPN: curl offers h2,http/1.1
+} [5 bytes data]
+* TLSv1.3 (OUT), TLS handshake, Client hello (1):
+} [512 bytes data]
+*  CAfile: /etc/ssl/certs/ca-certificates.crt
+*  CApath: /etc/ssl/certs
+{ [5 bytes data]
+* TLSv1.3 (IN), TLS handshake, Server hello (2):
+{ [122 bytes data]
+* TLSv1.3 (IN), TLS handshake, Encrypted Extensions (8):
+{ [29 bytes data]
+* TLSv1.3 (IN), TLS handshake, Certificate (11):
+{ [2494 bytes data]
+* TLSv1.3 (IN), TLS handshake, CERT verify (15):
+{ [79 bytes data]
+* TLSv1.3 (IN), TLS handshake, Finished (20):
+{ [52 bytes data]
+* TLSv1.3 (OUT), TLS change cipher, Change cipher spec (1):
+} [1 bytes data]
+* TLSv1.3 (OUT), TLS handshake, Finished (20):
+} [52 bytes data]
+* SSL connection using TLSv1.3 / TLS_AES_256_GCM_SHA384 / X25519 / id-ecPublicKey
+* ALPN: server accepted h2
+* Server certificate:
+*  subject: jurisdictionC=US; jurisdictionST=Delaware; businessCategory=Private Organization; serialNumber=2419959; C=US; ST=Virginia; L=McLean; postalCode=22102; street=1680 Capital One Dr; O=Capital One Financial Corporation; CN=www.capitalone.com
+*  start date: Jan 17 00:00:00 2025 GMT
+*  expire date: Jan 16 23:59:59 2026 GMT
+*  subjectAltName: host "www.capitalone.com" matched cert's "www.capitalone.com"
+*  issuer: C=US; O=DigiCert Inc; CN=DigiCert Global G3 TLS ECC SHA384 2020 CA1
+*  SSL certificate verify ok.
+*   Certificate level 0: Public key type EC/prime256v1 (256/128 Bits/secBits), signed using ecdsa-with-SHA384
+*   Certificate level 1: Public key type EC/secp384r1 (384/192 Bits/secBits), signed using ecdsa-with-SHA384
+*   Certificate level 2: Public key type EC/secp384r1 (384/192 Bits/secBits), signed using ecdsa-with-SHA384
+} [5 bytes data]
+* using HTTP/2
+* [HTTP/2] [1] OPENED stream for https://www.capitalone.com/api/account/validateLogin?callback=<script>alert(1)</script>
+* [HTTP/2] [1] [:method: GET]
+* [HTTP/2] [1] [:scheme: https]
+* [HTTP/2] [1] [:authority: www.capitalone.com]
+* [HTTP/2] [1] [:path: /api/account/validateLogin?callback=<script>alert(1)</script>]
+* [HTTP/2] [1] [user-agent: curl/8.5.0]
+* [HTTP/2] [1] [accept: text/html]
+} [5 bytes data]
+> GET /api/account/validateLogin?callback=<script>alert(1)</script> HTTP/2
+> Host: www.capitalone.com
+> User-Agent: curl/8.5.0
+> Accept: text/html
+> 
+{ [5 bytes data]
+* TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+{ [265 bytes data]
+* TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+{ [265 bytes data]
+* old SSL session ID is stale, removing
+{ [5 bytes data]
+< HTTP/2 301 
+< content-length: 0
+< location: https://www.capitalone.com/api/account/validateLogin/?callback=<script>alert(1)</script>
+< expires: Fri, 20 Jun 2025 15:52:43 GMT
+< cache-control: max-age=0, no-cache, no-store
+< pragma: no-cache
+< date: Fri, 20 Jun 2025 15:52:43 GMT
+< set-cookie: TLTUID=0EAA52DD78C360F3BF69CA271514028A; expires=Wed, 19-Jun-2030 15:52:43 GMT; path=/; domain=.capitalone.com; secure
+< set-cookie: TLTSID=A26EE6D5DE5F72BAC50507D07775F3E7; expires=Fri, 20-Jun-2025 17:52:43 GMT; path=/; domain=.capitalone.com; secure
+< 
+{ [5 bytes data]
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+* Connection #0 to host www.capitalone.com left intact
+
+
+
+=== Проверка 404 Enumeration ===
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Host www.capitalone.com:443 was resolved.
+* IPv6: (none)
+* IPv4: 92.123.103.58, 92.123.103.82
+*   Trying 92.123.103.58:443...
+* Connected to www.capitalone.com (92.123.103.58) port 443
+* ALPN: curl offers h2,http/1.1
+} [5 bytes data]
+* TLSv1.3 (OUT), TLS handshake, Client hello (1):
+} [512 bytes data]
+*  CAfile: /etc/ssl/certs/ca-certificates.crt
+*  CApath: /etc/ssl/certs
+{ [5 bytes data]
+* TLSv1.3 (IN), TLS handshake, Server hello (2):
+{ [122 bytes data]
+* TLSv1.3 (IN), TLS handshake, Encrypted Extensions (8):
+{ [29 bytes data]
+* TLSv1.3 (IN), TLS handshake, Certificate (11):
+{ [2494 bytes data]
+* TLSv1.3 (IN), TLS handshake, CERT verify (15):
+{ [79 bytes data]
+* TLSv1.3 (IN), TLS handshake, Finished (20):
+{ [52 bytes data]
+* TLSv1.3 (OUT), TLS change cipher, Change cipher spec (1):
+} [1 bytes data]
+* TLSv1.3 (OUT), TLS handshake, Finished (20):
+} [52 bytes data]
+* SSL connection using TLSv1.3 / TLS_AES_256_GCM_SHA384 / X25519 / id-ecPublicKey
+* ALPN: server accepted h2
+* Server certificate:
+*  subject: jurisdictionC=US; jurisdictionST=Delaware; businessCategory=Private Organization; serialNumber=2419959; C=US; ST=Virginia; L=McLean; postalCode=22102; street=1680 Capital One Dr; O=Capital One Financial Corporation; CN=www.capitalone.com
+*  start date: Jan 17 00:00:00 2025 GMT
+*  expire date: Jan 16 23:59:59 2026 GMT
+*  subjectAltName: host "www.capitalone.com" matched cert's "www.capitalone.com"
+*  issuer: C=US; O=DigiCert Inc; CN=DigiCert Global G3 TLS ECC SHA384 2020 CA1
+*  SSL certificate verify ok.
+*   Certificate level 0: Public key type EC/prime256v1 (256/128 Bits/secBits), signed using ecdsa-with-SHA384
+*   Certificate level 1: Public key type EC/secp384r1 (384/192 Bits/secBits), signed using ecdsa-with-SHA384
+*   Certificate level 2: Public key type EC/secp384r1 (384/192 Bits/secBits), signed using ecdsa-with-SHA384
+} [5 bytes data]
+* using HTTP/2
+* [HTTP/2] [1] OPENED stream for https://www.capitalone.com/v2/new_endpoint
+* [HTTP/2] [1] [:method: GET]
+* [HTTP/2] [1] [:scheme: https]
+* [HTTP/2] [1] [:authority: www.capitalone.com]
+* [HTTP/2] [1] [:path: /v2/new_endpoint]
+* [HTTP/2] [1] [user-agent: curl/8.5.0]
+* [HTTP/2] [1] [accept: */*]
+} [5 bytes data]
+> GET /v2/new_endpoint HTTP/2
+> Host: www.capitalone.com
+> User-Agent: curl/8.5.0
+> Accept: */*
+> 
+{ [5 bytes data]
+* TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+{ [265 bytes data]
+* TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+{ [265 bytes data]
+* old SSL session ID is stale, removing
+{ [5 bytes data]
+< HTTP/2 301 
+< content-length: 0
+< location: https://www.capitalone.com/v2/new_endpoint/
+< expires: Fri, 20 Jun 2025 15:52:43 GMT
+< cache-control: max-age=0, no-cache, no-store
+< pragma: no-cache
+< date: Fri, 20 Jun 2025 15:52:43 GMT
+< set-cookie: TLTUID=3FE9D5CC9C05632599E9098A1E251070; expires=Wed, 19-Jun-2030 15:52:43 GMT; path=/; domain=.capitalone.com; secure
+< set-cookie: TLTSID=40E27B683AE5754BBD4C54ED59714233; expires=Fri, 20-Jun-2025 17:52:43 GMT; path=/; domain=.capitalone.com; secure
+< 
+{ [5 bytes data]
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+* Connection #0 to host www.capitalone.com left intact
+
+
+
+=== Проверка 401 Bypass ===
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Host www.capitalone.com:443 was resolved.
+* IPv6: (none)
+* IPv4: 92.123.103.82, 92.123.103.58
+*   Trying 92.123.103.82:443...
+* Connected to www.capitalone.com (92.123.103.82) port 443
+* ALPN: curl offers h2,http/1.1
+} [5 bytes data]
+* TLSv1.3 (OUT), TLS handshake, Client hello (1):
+} [512 bytes data]
+*  CAfile: /etc/ssl/certs/ca-certificates.crt
+*  CApath: /etc/ssl/certs
+{ [5 bytes data]
+* TLSv1.3 (IN), TLS handshake, Server hello (2):
+{ [122 bytes data]
+* TLSv1.3 (IN), TLS handshake, Encrypted Extensions (8):
+{ [29 bytes data]
+* TLSv1.3 (IN), TLS handshake, Certificate (11):
+{ [2494 bytes data]
+* TLSv1.3 (IN), TLS handshake, CERT verify (15):
+{ [79 bytes data]
+* TLSv1.3 (IN), TLS handshake, Finished (20):
+{ [52 bytes data]
+* TLSv1.3 (OUT), TLS change cipher, Change cipher spec (1):
+} [1 bytes data]
+* TLSv1.3 (OUT), TLS handshake, Finished (20):
+} [52 bytes data]
+* SSL connection using TLSv1.3 / TLS_AES_256_GCM_SHA384 / X25519 / id-ecPublicKey
+* ALPN: server accepted h2
+* Server certificate:
+*  subject: jurisdictionC=US; jurisdictionST=Delaware; businessCategory=Private Organization; serialNumber=2419959; C=US; ST=Virginia; L=McLean; postalCode=22102; street=1680 Capital One Dr; O=Capital One Financial Corporation; CN=www.capitalone.com
+*  start date: Jan 17 00:00:00 2025 GMT
+*  expire date: Jan 16 23:59:59 2026 GMT
+*  subjectAltName: host "www.capitalone.com" matched cert's "www.capitalone.com"
+*  issuer: C=US; O=DigiCert Inc; CN=DigiCert Global G3 TLS ECC SHA384 2020 CA1
+*  SSL certificate verify ok.
+*   Certificate level 0: Public key type EC/prime256v1 (256/128 Bits/secBits), signed using ecdsa-with-SHA384
+*   Certificate level 1: Public key type EC/secp384r1 (384/192 Bits/secBits), signed using ecdsa-with-SHA384
+*   Certificate level 2: Public key type EC/secp384r1 (384/192 Bits/secBits), signed using ecdsa-with-SHA384
+} [5 bytes data]
+* using HTTP/2
+* [HTTP/2] [1] OPENED stream for https://www.capitalone.com/admin/config.json
+* [HTTP/2] [1] [:method: GET]
+* [HTTP/2] [1] [:scheme: https]
+* [HTTP/2] [1] [:authority: www.capitalone.com]
+* [HTTP/2] [1] [:path: /admin/config.json]
+* [HTTP/2] [1] [user-agent: curl/8.5.0]
+* [HTTP/2] [1] [accept: */*]
+* [HTTP/2] [1] [x-api-key: test]
+} [5 bytes data]
+> GET /admin/config.json HTTP/2
+> Host: www.capitalone.com
+> User-Agent: curl/8.5.0
+> Accept: */*
+> X-API-Key: test
+> 
+{ [5 bytes data]
+* TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+{ [265 bytes data]
+* TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+{ [265 bytes data]
+* old SSL session ID is stale, removing
+{ [5 bytes data]
+  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0< HTTP/2 404 
+< accept-ranges: bytes
+< content-length: 100
+< content-type: text/html
+< etag: "d4bf94aec16315618161101efa9d048d:1666125989.803706"
+< last-modified: Mon, 26 Sep 2022 16:43:26 GMT
+< server: AkamaiNetStorage
+< expires: Fri, 20 Jun 2025 15:52:45 GMT
+< cache-control: max-age=0, no-cache, no-store
+< pragma: no-cache
+< date: Fri, 20 Jun 2025 15:52:45 GMT
+< 
+{ [100 bytes data]
+100   100  100   100    0     0     83      0  0:00:01  0:00:01 --:--:--    83
+* Connection #0 to host www.capitalone.com left intact
+<html><head><meta http-equiv="refresh" content="0; url=/page-not-found/"></head><body></body></html>  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Host www.capitalone.com:443 was resolved.
+* IPv6: (none)
+* IPv4: 92.123.103.82, 92.123.103.58
+*   Trying 92.123.103.82:443...
+* Connected to www.capitalone.com (92.123.103.82) port 443
+* ALPN: curl offers h2,http/1.1
+} [5 bytes data]
+* TLSv1.3 (OUT), TLS handshake, Client hello (1):
+} [512 bytes data]
+*  CAfile: /etc/ssl/certs/ca-certificates.crt
+*  CApath: /etc/ssl/certs
+{ [5 bytes data]
+* TLSv1.3 (IN), TLS handshake, Server hello (2):
+{ [122 bytes data]
+* TLSv1.3 (IN), TLS handshake, Encrypted Extensions (8):
+{ [29 bytes data]
+* TLSv1.3 (IN), TLS handshake, Certificate (11):
+{ [2494 bytes data]
+* TLSv1.3 (IN), TLS handshake, CERT verify (15):
+{ [80 bytes data]
+* TLSv1.3 (IN), TLS handshake, Finished (20):
+{ [52 bytes data]
+* TLSv1.3 (OUT), TLS change cipher, Change cipher spec (1):
+} [1 bytes data]
+* TLSv1.3 (OUT), TLS handshake, Finished (20):
+} [52 bytes data]
+* SSL connection using TLSv1.3 / TLS_AES_256_GCM_SHA384 / X25519 / id-ecPublicKey
+* ALPN: server accepted h2
+* Server certificate:
+*  subject: jurisdictionC=US; jurisdictionST=Delaware; businessCategory=Private Organization; serialNumber=2419959; C=US; ST=Virginia; L=McLean; postalCode=22102; street=1680 Capital One Dr; O=Capital One Financial Corporation; CN=www.capitalone.com
+*  start date: Jan 17 00:00:00 2025 GMT
+*  expire date: Jan 16 23:59:59 2026 GMT
+*  subjectAltName: host "www.capitalone.com" matched cert's "www.capitalone.com"
+*  issuer: C=US; O=DigiCert Inc; CN=DigiCert Global G3 TLS ECC SHA384 2020 CA1
+*  SSL certificate verify ok.
+*   Certificate level 0: Public key type EC/prime256v1 (256/128 Bits/secBits), signed using ecdsa-with-SHA384
+*   Certificate level 1: Public key type EC/secp384r1 (384/192 Bits/secBits), signed using ecdsa-with-SHA384
+*   Certificate level 2: Public key type EC/secp384r1 (384/192 Bits/secBits), signed using ecdsa-with-SHA384
+} [5 bytes data]
+* using HTTP/2
+* [HTTP/2] [1] OPENED stream for https://www.capitalone.com/admin/config.json
+* [HTTP/2] [1] [:method: GET]
+* [HTTP/2] [1] [:scheme: https]
+* [HTTP/2] [1] [:authority: www.capitalone.com]
+* [HTTP/2] [1] [:path: /admin/config.json]
+* [HTTP/2] [1] [user-agent: curl/8.5.0]
+* [HTTP/2] [1] [accept: */*]
+* [HTTP/2] [1] [authorization: Bearer eyJ0eXAiOiJKV1Qi...]
+} [5 bytes data]
+> GET /admin/config.json HTTP/2
+> Host: www.capitalone.com
+> User-Agent: curl/8.5.0
+> Accept: */*
+> Authorization: Bearer eyJ0eXAiOiJKV1Qi...
+> 
+{ [5 bytes data]
+* TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+{ [265 bytes data]
+* TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+{ [265 bytes data]
+* old SSL session ID is stale, removing
+{ [5 bytes data]
+  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0< HTTP/2 404 
+< accept-ranges: bytes
+< content-length: 100
+< content-type: text/html
+< etag: "d4bf94aec16315618161101efa9d048d:1666125989.803706"
+< last-modified: Mon, 26 Sep 2022 16:43:26 GMT
+< server: AkamaiNetStorage
+< expires: Fri, 20 Jun 2025 15:52:47 GMT
+< cache-control: max-age=0, no-cache, no-store
+< pragma: no-cache
+< date: Fri, 20 Jun 2025 15:52:47 GMT
+< 
+{ [100 bytes data]
+100   100  100   100    0     0     49      0  0:00:02  0:00:02 --:--:--    49100   100  100   100    0     0     49      0  0:00:02  0:00:02 --:--:--    49
+* Connection #0 to host www.capitalone.com left intact
+<html><head><meta http-equiv="refresh" content="0; url=/page-not-found/"></head><body></body></html>
+
+
+=== Проверка завершена. Результаты в vuln_checks.txt ===
