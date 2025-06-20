@@ -1,0 +1,104 @@
+
+=== Тест: Поиск ключей в utag.sync.js ===
+
+
+
+=== Тест: Проверка User Enumeration ===
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Host www.capitalone.com:443 was resolved.
+* IPv6: (none)
+* IPv4: 92.123.103.58, 92.123.103.82
+*   Trying 92.123.103.58:443...
+* Connected to www.capitalone.com (92.123.103.58) port 443
+* ALPN: curl offers h2,http/1.1
+} [5 bytes data]
+* TLSv1.3 (OUT), TLS handshake, Client hello (1):
+} [512 bytes data]
+*  CAfile: /etc/ssl/certs/ca-certificates.crt
+*  CApath: /etc/ssl/certs
+{ [5 bytes data]
+* TLSv1.3 (IN), TLS handshake, Server hello (2):
+{ [122 bytes data]
+* TLSv1.3 (IN), TLS handshake, Encrypted Extensions (8):
+{ [29 bytes data]
+* TLSv1.3 (IN), TLS handshake, Certificate (11):
+{ [2494 bytes data]
+* TLSv1.3 (IN), TLS handshake, CERT verify (15):
+{ [79 bytes data]
+* TLSv1.3 (IN), TLS handshake, Finished (20):
+{ [52 bytes data]
+* TLSv1.3 (OUT), TLS change cipher, Change cipher spec (1):
+} [1 bytes data]
+* TLSv1.3 (OUT), TLS handshake, Finished (20):
+} [52 bytes data]
+* SSL connection using TLSv1.3 / TLS_AES_256_GCM_SHA384 / X25519 / id-ecPublicKey
+* ALPN: server accepted h2
+* Server certificate:
+*  subject: jurisdictionC=US; jurisdictionST=Delaware; businessCategory=Private Organization; serialNumber=2419959; C=US; ST=Virginia; L=McLean; postalCode=22102; street=1680 Capital One Dr; O=Capital One Financial Corporation; CN=www.capitalone.com
+*  start date: Jan 17 00:00:00 2025 GMT
+*  expire date: Jan 16 23:59:59 2026 GMT
+*  subjectAltName: host "www.capitalone.com" matched cert's "www.capitalone.com"
+*  issuer: C=US; O=DigiCert Inc; CN=DigiCert Global G3 TLS ECC SHA384 2020 CA1
+*  SSL certificate verify ok.
+*   Certificate level 0: Public key type EC/prime256v1 (256/128 Bits/secBits), signed using ecdsa-with-SHA384
+*   Certificate level 1: Public key type EC/secp384r1 (384/192 Bits/secBits), signed using ecdsa-with-SHA384
+*   Certificate level 2: Public key type EC/secp384r1 (384/192 Bits/secBits), signed using ecdsa-with-SHA384
+} [5 bytes data]
+* using HTTP/2
+* [HTTP/2] [1] OPENED stream for https://www.capitalone.com/api/account/validateLogin?username=admin
+* [HTTP/2] [1] [:method: GET]
+* [HTTP/2] [1] [:scheme: https]
+* [HTTP/2] [1] [:authority: www.capitalone.com]
+* [HTTP/2] [1] [:path: /api/account/validateLogin?username=admin]
+* [HTTP/2] [1] [user-agent: curl/8.5.0]
+* [HTTP/2] [1] [accept: */*]
+} [5 bytes data]
+> GET /api/account/validateLogin?username=admin HTTP/2
+> Host: www.capitalone.com
+> User-Agent: curl/8.5.0
+> Accept: */*
+> 
+{ [5 bytes data]
+* TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+{ [265 bytes data]
+* TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+{ [265 bytes data]
+* old SSL session ID is stale, removing
+{ [5 bytes data]
+< HTTP/2 301 
+< content-length: 0
+< location: https://www.capitalone.com/api/account/validateLogin/?username=admin
+< expires: Fri, 20 Jun 2025 15:18:18 GMT
+< cache-control: max-age=0, no-cache, no-store
+< pragma: no-cache
+< date: Fri, 20 Jun 2025 15:18:18 GMT
+< set-cookie: TLTUID=91CB59057295A0B12E269ED0A4C9B768; expires=Wed, 19-Jun-2030 15:18:18 GMT; path=/; domain=.capitalone.com; secure
+< set-cookie: TLTSID=42FCE0712DC91A5C10B16C9B9D07BDA2; expires=Fri, 20-Jun-2025 17:18:18 GMT; path=/; domain=.capitalone.com; secure
+< 
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+* Connection #0 to host www.capitalone.com left intact
+
+
+
+=== Тест: Перебор productId ===
+jq: parse error: Invalid numeric literal at line 1, column 18
+jq: parse error: Invalid numeric literal at line 1, column 18
+jq: parse error: Invalid numeric literal at line 1, column 18
+jq: parse error: Invalid numeric literal at line 1, column 18
+jq: parse error: Invalid numeric literal at line 1, column 18
+
+
+
+=== Тест: Сброс пароля без токена ===
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    22    0     0  100    22      0    288 --:--:-- --:--:-- --:--:--   289
+
+
+
+=== Тест: Проверка конфига БД ===
+jq: parse error: Invalid numeric literal at line 1, column 18
+
+
+
