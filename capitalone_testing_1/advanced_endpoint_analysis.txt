@@ -1,0 +1,497 @@
+===== Testing URL: https://api.capitalone.com/users/v1/users/1234 =====
+--- Command: GET with headers ---
+* Host api.capitalone.com:443 was resolved.
+* IPv6: (none)
+* IPv4: 34.206.133.222, 34.202.246.154, 34.194.139.25
+*   Trying 34.206.133.222:443...
+* Connected to api.capitalone.com (34.206.133.222) port 443
+* ALPN: curl offers h2,http/1.1
+} [5 bytes data]
+* TLSv1.3 (OUT), TLS handshake, Client hello (1):
+} [512 bytes data]
+* TLSv1.3 (IN), TLS handshake, Server hello (2):
+{ [95 bytes data]
+* TLSv1.2 (IN), TLS handshake, Certificate (11):
+{ [4625 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server key exchange (12):
+{ [333 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server finished (14):
+{ [4 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):
+} [70 bytes data]
+* TLSv1.2 (OUT), TLS change cipher, Change cipher spec (1):
+} [1 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Finished (20):
+} [16 bytes data]
+* TLSv1.2 (IN), TLS handshake, Finished (20):
+{ [16 bytes data]
+* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256 / prime256v1 / rsaEncryption
+* ALPN: server did not agree on a protocol. Uses default.
+* Server certificate:
+*  subject: jurisdictionC=US; jurisdictionST=Delaware; businessCategory=Private Organization; serialNumber=2419959; C=US; ST=Virginia; L=McLean; O=Capital One Financial Corporation; CN=api.capitalone.com
+*  start date: Jul 31 00:00:00 2024 GMT
+*  expire date: Jul 31 23:59:59 2025 GMT
+*  issuer: C=US; O=DigiCert Inc; CN=DigiCert EV RSA CA G2
+*  SSL certificate verify result: self-signed certificate in certificate chain (19), continuing anyway.
+*   Certificate level 0: Public key type RSA (2048/112 Bits/secBits), signed using sha256WithRSAEncryption
+*   Certificate level 1: Public key type RSA (2048/112 Bits/secBits), signed using sha256WithRSAEncryption
+*   Certificate level 2: Public key type RSA (2048/112 Bits/secBits), signed using sha256WithRSAEncryption
+* using HTTP/1.x
+} [5 bytes data]
+> GET /users/v1/users/1234 HTTP/1.1
+> Host: api.capitalone.com
+> Accept: */*
+> User-Agent: Mozilla/5.0
+> X-Forwarded-For: 127.0.0.1
+> 
+{ [5 bytes data]
+< HTTP/1.1 404 Not Found
+< Date: Sat, 21 Jun 2025 13:30:07 GMT
+< Content-Type: text/html
+< Transfer-Encoding: chunked
+< Connection: keep-alive
+< 
+{ [721 bytes data]
+* Connection #0 to host api.capitalone.com left intact
+ <div style="border: 3px solid #4991C5; font:1.5em; font-family:tahoma,calibri,arial; font-weight:bold; color:#1A4369; padding:5px; margin:10px; text-align:center">  The specified URL cannot be found. </div><!--0123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234-->
+
+
+
+--- Command: OPTIONS ---
+* Host api.capitalone.com:443 was resolved.
+* IPv6: (none)
+* IPv4: 34.194.139.25, 34.206.133.222, 34.202.246.154
+*   Trying 34.194.139.25:443...
+* Connected to api.capitalone.com (34.194.139.25) port 443
+* ALPN: curl offers h2,http/1.1
+} [5 bytes data]
+* TLSv1.3 (OUT), TLS handshake, Client hello (1):
+} [512 bytes data]
+* TLSv1.3 (IN), TLS handshake, Server hello (2):
+{ [95 bytes data]
+* TLSv1.2 (IN), TLS handshake, Certificate (11):
+{ [4625 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server key exchange (12):
+{ [333 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server finished (14):
+{ [4 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):
+} [70 bytes data]
+* TLSv1.2 (OUT), TLS change cipher, Change cipher spec (1):
+} [1 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Finished (20):
+} [16 bytes data]
+* TLSv1.2 (IN), TLS handshake, Finished (20):
+{ [16 bytes data]
+* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256 / prime256v1 / rsaEncryption
+* ALPN: server did not agree on a protocol. Uses default.
+* Server certificate:
+*  subject: jurisdictionC=US; jurisdictionST=Delaware; businessCategory=Private Organization; serialNumber=2419959; C=US; ST=Virginia; L=McLean; O=Capital One Financial Corporation; CN=api.capitalone.com
+*  start date: Jul 31 00:00:00 2024 GMT
+*  expire date: Jul 31 23:59:59 2025 GMT
+*  issuer: C=US; O=DigiCert Inc; CN=DigiCert EV RSA CA G2
+*  SSL certificate verify result: self-signed certificate in certificate chain (19), continuing anyway.
+*   Certificate level 0: Public key type RSA (2048/112 Bits/secBits), signed using sha256WithRSAEncryption
+*   Certificate level 1: Public key type RSA (2048/112 Bits/secBits), signed using sha256WithRSAEncryption
+*   Certificate level 2: Public key type RSA (2048/112 Bits/secBits), signed using sha256WithRSAEncryption
+* using HTTP/1.x
+} [5 bytes data]
+> OPTIONS /users/v1/users/1234 HTTP/1.1
+> Host: api.capitalone.com
+> User-Agent: curl/8.5.0
+> Accept: */*
+> 
+{ [5 bytes data]
+< HTTP/1.1 400 Bad Request
+< Date: Sat, 21 Jun 2025 13:30:08 GMT
+< Content-Type: application/json
+< Transfer-Encoding: chunked
+< Connection: keep-alive
+< 
+{ [77 bytes data]
+* Connection #0 to host api.capitalone.com left intact
+{"code":104001,"description":"Request validation error. Method not allowed"}
+
+
+
+--- Command: SQLi test ---
+* URL rejected: Malformed input to a URL function
+* Closing connection
+
+
+
+--- Command: XSS test ---
+* Host api.capitalone.com:443 was resolved.
+* IPv6: (none)
+* IPv4: 34.202.246.154, 34.206.133.222, 34.194.139.25
+*   Trying 34.202.246.154:443...
+* Connected to api.capitalone.com (34.202.246.154) port 443
+* ALPN: curl offers h2,http/1.1
+} [5 bytes data]
+* TLSv1.3 (OUT), TLS handshake, Client hello (1):
+} [512 bytes data]
+* TLSv1.3 (IN), TLS handshake, Server hello (2):
+{ [95 bytes data]
+* TLSv1.2 (IN), TLS handshake, Certificate (11):
+{ [4625 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server key exchange (12):
+{ [333 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server finished (14):
+{ [4 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):
+} [70 bytes data]
+* TLSv1.2 (OUT), TLS change cipher, Change cipher spec (1):
+} [1 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Finished (20):
+} [16 bytes data]
+* TLSv1.2 (IN), TLS handshake, Finished (20):
+{ [16 bytes data]
+* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256 / prime256v1 / rsaEncryption
+* ALPN: server did not agree on a protocol. Uses default.
+* Server certificate:
+*  subject: jurisdictionC=US; jurisdictionST=Delaware; businessCategory=Private Organization; serialNumber=2419959; C=US; ST=Virginia; L=McLean; O=Capital One Financial Corporation; CN=api.capitalone.com
+*  start date: Jul 31 00:00:00 2024 GMT
+*  expire date: Jul 31 23:59:59 2025 GMT
+*  issuer: C=US; O=DigiCert Inc; CN=DigiCert EV RSA CA G2
+*  SSL certificate verify result: self-signed certificate in certificate chain (19), continuing anyway.
+*   Certificate level 0: Public key type RSA (2048/112 Bits/secBits), signed using sha256WithRSAEncryption
+*   Certificate level 1: Public key type RSA (2048/112 Bits/secBits), signed using sha256WithRSAEncryption
+*   Certificate level 2: Public key type RSA (2048/112 Bits/secBits), signed using sha256WithRSAEncryption
+* using HTTP/1.x
+} [5 bytes data]
+> GET /users/v1/users/1234?test=<script>alert(1)</script> HTTP/1.1
+> Host: api.capitalone.com
+> User-Agent: curl/8.5.0
+> Accept: */*
+> 
+{ [5 bytes data]
+< HTTP/1.1 404 Not Found
+< Date: Sat, 21 Jun 2025 13:30:09 GMT
+< Content-Type: text/html
+< Transfer-Encoding: chunked
+< Connection: keep-alive
+< 
+{ [721 bytes data]
+* Connection #0 to host api.capitalone.com left intact
+ <div style="border: 3px solid #4991C5; font:1.5em; font-family:tahoma,calibri,arial; font-weight:bold; color:#1A4369; padding:5px; margin:10px; text-align:center">  The specified URL cannot be found. </div><!--0123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234-->
+
+
+
+--- Command: IDOR test (https://api.capitalone.com/users/v99999/users/99999) ---
+* Host api.capitalone.com:443 was resolved.
+* IPv6: (none)
+* IPv4: 34.206.133.222, 34.202.246.154, 34.194.139.25
+*   Trying 34.206.133.222:443...
+* Connected to api.capitalone.com (34.206.133.222) port 443
+* ALPN: curl offers h2,http/1.1
+} [5 bytes data]
+* TLSv1.3 (OUT), TLS handshake, Client hello (1):
+} [512 bytes data]
+* TLSv1.3 (IN), TLS handshake, Server hello (2):
+{ [95 bytes data]
+* TLSv1.2 (IN), TLS handshake, Certificate (11):
+{ [4625 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server key exchange (12):
+{ [333 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server finished (14):
+{ [4 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):
+} [70 bytes data]
+* TLSv1.2 (OUT), TLS change cipher, Change cipher spec (1):
+} [1 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Finished (20):
+} [16 bytes data]
+* TLSv1.2 (IN), TLS handshake, Finished (20):
+{ [16 bytes data]
+* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256 / prime256v1 / rsaEncryption
+* ALPN: server did not agree on a protocol. Uses default.
+* Server certificate:
+*  subject: jurisdictionC=US; jurisdictionST=Delaware; businessCategory=Private Organization; serialNumber=2419959; C=US; ST=Virginia; L=McLean; O=Capital One Financial Corporation; CN=api.capitalone.com
+*  start date: Jul 31 00:00:00 2024 GMT
+*  expire date: Jul 31 23:59:59 2025 GMT
+*  issuer: C=US; O=DigiCert Inc; CN=DigiCert EV RSA CA G2
+*  SSL certificate verify result: self-signed certificate in certificate chain (19), continuing anyway.
+*   Certificate level 0: Public key type RSA (2048/112 Bits/secBits), signed using sha256WithRSAEncryption
+*   Certificate level 1: Public key type RSA (2048/112 Bits/secBits), signed using sha256WithRSAEncryption
+*   Certificate level 2: Public key type RSA (2048/112 Bits/secBits), signed using sha256WithRSAEncryption
+* using HTTP/1.x
+} [5 bytes data]
+> GET /users/v99999/users/99999 HTTP/1.1
+> Host: api.capitalone.com
+> User-Agent: curl/8.5.0
+> Accept: */*
+> 
+{ [5 bytes data]
+< HTTP/1.1 403 Forbidden
+< Date: Sat, 21 Jun 2025 13:30:10 GMT
+< Content-Type: application/json
+< Transfer-Encoding: chunked
+< Connection: keep-alive
+< 
+{ [109 bytes data]
+* Connection #0 to host api.capitalone.com left intact
+{"code":101305,"description":"Access forbidden. No CN/Api-Key available|No matching endpoint anonymous app"}
+
+
+
+===== Testing URL: https://secure.capitalone.com/auth/oidc/token =====
+--- Command: GET with headers ---
+* Could not resolve host: secure.capitalone.com
+* Closing connection
+
+
+
+--- Command: OPTIONS ---
+* Could not resolve host: secure.capitalone.com
+* Closing connection
+
+
+
+--- Command: SQLi test ---
+* URL rejected: Malformed input to a URL function
+* Closing connection
+
+
+
+--- Command: XSS test ---
+* Could not resolve host: secure.capitalone.com
+* Closing connection
+
+
+
+===== Testing URL: https://api.capitalone.com/accounts/v1/accounts/5678 =====
+--- Command: GET with headers ---
+* Host api.capitalone.com:443 was resolved.
+* IPv6: (none)
+* IPv4: 34.202.246.154, 34.194.139.25, 34.206.133.222
+*   Trying 34.202.246.154:443...
+* Connected to api.capitalone.com (34.202.246.154) port 443
+* ALPN: curl offers h2,http/1.1
+} [5 bytes data]
+* TLSv1.3 (OUT), TLS handshake, Client hello (1):
+} [512 bytes data]
+* TLSv1.3 (IN), TLS handshake, Server hello (2):
+{ [95 bytes data]
+* TLSv1.2 (IN), TLS handshake, Certificate (11):
+{ [4625 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server key exchange (12):
+{ [333 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server finished (14):
+{ [4 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):
+} [70 bytes data]
+* TLSv1.2 (OUT), TLS change cipher, Change cipher spec (1):
+} [1 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Finished (20):
+} [16 bytes data]
+* TLSv1.2 (IN), TLS handshake, Finished (20):
+{ [16 bytes data]
+* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256 / prime256v1 / rsaEncryption
+* ALPN: server did not agree on a protocol. Uses default.
+* Server certificate:
+*  subject: jurisdictionC=US; jurisdictionST=Delaware; businessCategory=Private Organization; serialNumber=2419959; C=US; ST=Virginia; L=McLean; O=Capital One Financial Corporation; CN=api.capitalone.com
+*  start date: Jul 31 00:00:00 2024 GMT
+*  expire date: Jul 31 23:59:59 2025 GMT
+*  issuer: C=US; O=DigiCert Inc; CN=DigiCert EV RSA CA G2
+*  SSL certificate verify result: self-signed certificate in certificate chain (19), continuing anyway.
+*   Certificate level 0: Public key type RSA (2048/112 Bits/secBits), signed using sha256WithRSAEncryption
+*   Certificate level 1: Public key type RSA (2048/112 Bits/secBits), signed using sha256WithRSAEncryption
+*   Certificate level 2: Public key type RSA (2048/112 Bits/secBits), signed using sha256WithRSAEncryption
+* using HTTP/1.x
+} [5 bytes data]
+> GET /accounts/v1/accounts/5678 HTTP/1.1
+> Host: api.capitalone.com
+> Accept: */*
+> User-Agent: Mozilla/5.0
+> X-Forwarded-For: 127.0.0.1
+> 
+{ [5 bytes data]
+< HTTP/1.1 404 Not Found
+< Date: Sat, 21 Jun 2025 13:30:11 GMT
+< Content-Type: text/html
+< Transfer-Encoding: chunked
+< Connection: keep-alive
+< 
+{ [721 bytes data]
+* Connection #0 to host api.capitalone.com left intact
+ <div style="border: 3px solid #4991C5; font:1.5em; font-family:tahoma,calibri,arial; font-weight:bold; color:#1A4369; padding:5px; margin:10px; text-align:center">  The specified URL cannot be found. </div><!--0123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234-->
+
+
+
+--- Command: OPTIONS ---
+* Host api.capitalone.com:443 was resolved.
+* IPv6: (none)
+* IPv4: 34.202.246.154, 34.194.139.25, 34.206.133.222
+*   Trying 34.202.246.154:443...
+* Connected to api.capitalone.com (34.202.246.154) port 443
+* ALPN: curl offers h2,http/1.1
+} [5 bytes data]
+* TLSv1.3 (OUT), TLS handshake, Client hello (1):
+} [512 bytes data]
+* TLSv1.3 (IN), TLS handshake, Server hello (2):
+{ [95 bytes data]
+* TLSv1.2 (IN), TLS handshake, Certificate (11):
+{ [4625 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server key exchange (12):
+{ [333 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server finished (14):
+{ [4 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):
+} [70 bytes data]
+* TLSv1.2 (OUT), TLS change cipher, Change cipher spec (1):
+} [1 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Finished (20):
+} [16 bytes data]
+* TLSv1.2 (IN), TLS handshake, Finished (20):
+{ [16 bytes data]
+* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256 / prime256v1 / rsaEncryption
+* ALPN: server did not agree on a protocol. Uses default.
+* Server certificate:
+*  subject: jurisdictionC=US; jurisdictionST=Delaware; businessCategory=Private Organization; serialNumber=2419959; C=US; ST=Virginia; L=McLean; O=Capital One Financial Corporation; CN=api.capitalone.com
+*  start date: Jul 31 00:00:00 2024 GMT
+*  expire date: Jul 31 23:59:59 2025 GMT
+*  issuer: C=US; O=DigiCert Inc; CN=DigiCert EV RSA CA G2
+*  SSL certificate verify result: self-signed certificate in certificate chain (19), continuing anyway.
+*   Certificate level 0: Public key type RSA (2048/112 Bits/secBits), signed using sha256WithRSAEncryption
+*   Certificate level 1: Public key type RSA (2048/112 Bits/secBits), signed using sha256WithRSAEncryption
+*   Certificate level 2: Public key type RSA (2048/112 Bits/secBits), signed using sha256WithRSAEncryption
+* using HTTP/1.x
+} [5 bytes data]
+> OPTIONS /accounts/v1/accounts/5678 HTTP/1.1
+> Host: api.capitalone.com
+> User-Agent: curl/8.5.0
+> Accept: */*
+> 
+{ [5 bytes data]
+< HTTP/1.1 400 Bad Request
+< Date: Sat, 21 Jun 2025 13:30:12 GMT
+< Content-Type: application/json
+< Transfer-Encoding: chunked
+< Connection: keep-alive
+< 
+{ [77 bytes data]
+* Connection #0 to host api.capitalone.com left intact
+{"code":104001,"description":"Request validation error. Method not allowed"}
+
+
+
+--- Command: SQLi test ---
+* URL rejected: Malformed input to a URL function
+* Closing connection
+
+
+
+--- Command: XSS test ---
+* Host api.capitalone.com:443 was resolved.
+* IPv6: (none)
+* IPv4: 34.206.133.222, 34.202.246.154, 34.194.139.25
+*   Trying 34.206.133.222:443...
+* Connected to api.capitalone.com (34.206.133.222) port 443
+* ALPN: curl offers h2,http/1.1
+} [5 bytes data]
+* TLSv1.3 (OUT), TLS handshake, Client hello (1):
+} [512 bytes data]
+* TLSv1.3 (IN), TLS handshake, Server hello (2):
+{ [95 bytes data]
+* TLSv1.2 (IN), TLS handshake, Certificate (11):
+{ [4625 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server key exchange (12):
+{ [333 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server finished (14):
+{ [4 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):
+} [70 bytes data]
+* TLSv1.2 (OUT), TLS change cipher, Change cipher spec (1):
+} [1 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Finished (20):
+} [16 bytes data]
+* TLSv1.2 (IN), TLS handshake, Finished (20):
+{ [16 bytes data]
+* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256 / prime256v1 / rsaEncryption
+* ALPN: server did not agree on a protocol. Uses default.
+* Server certificate:
+*  subject: jurisdictionC=US; jurisdictionST=Delaware; businessCategory=Private Organization; serialNumber=2419959; C=US; ST=Virginia; L=McLean; O=Capital One Financial Corporation; CN=api.capitalone.com
+*  start date: Jul 31 00:00:00 2024 GMT
+*  expire date: Jul 31 23:59:59 2025 GMT
+*  issuer: C=US; O=DigiCert Inc; CN=DigiCert EV RSA CA G2
+*  SSL certificate verify result: self-signed certificate in certificate chain (19), continuing anyway.
+*   Certificate level 0: Public key type RSA (2048/112 Bits/secBits), signed using sha256WithRSAEncryption
+*   Certificate level 1: Public key type RSA (2048/112 Bits/secBits), signed using sha256WithRSAEncryption
+*   Certificate level 2: Public key type RSA (2048/112 Bits/secBits), signed using sha256WithRSAEncryption
+* using HTTP/1.x
+} [5 bytes data]
+> GET /accounts/v1/accounts/5678?test=<script>alert(1)</script> HTTP/1.1
+> Host: api.capitalone.com
+> User-Agent: curl/8.5.0
+> Accept: */*
+> 
+{ [5 bytes data]
+< HTTP/1.1 404 Not Found
+< Date: Sat, 21 Jun 2025 13:30:12 GMT
+< Content-Type: text/html
+< Transfer-Encoding: chunked
+< Connection: keep-alive
+< 
+{ [721 bytes data]
+* Connection #0 to host api.capitalone.com left intact
+ <div style="border: 3px solid #4991C5; font:1.5em; font-family:tahoma,calibri,arial; font-weight:bold; color:#1A4369; padding:5px; margin:10px; text-align:center">  The specified URL cannot be found. </div><!--0123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234-->
+
+
+
+--- Command: IDOR test (https://api.capitalone.com/accounts/v99999/accounts/99999) ---
+* Host api.capitalone.com:443 was resolved.
+* IPv6: (none)
+* IPv4: 34.202.246.154, 34.206.133.222, 34.194.139.25
+*   Trying 34.202.246.154:443...
+* Connected to api.capitalone.com (34.202.246.154) port 443
+* ALPN: curl offers h2,http/1.1
+} [5 bytes data]
+* TLSv1.3 (OUT), TLS handshake, Client hello (1):
+} [512 bytes data]
+* TLSv1.3 (IN), TLS handshake, Server hello (2):
+{ [95 bytes data]
+* TLSv1.2 (IN), TLS handshake, Certificate (11):
+{ [4625 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server key exchange (12):
+{ [333 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server finished (14):
+{ [4 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):
+} [70 bytes data]
+* TLSv1.2 (OUT), TLS change cipher, Change cipher spec (1):
+} [1 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Finished (20):
+} [16 bytes data]
+* TLSv1.2 (IN), TLS handshake, Finished (20):
+{ [16 bytes data]
+* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256 / prime256v1 / rsaEncryption
+* ALPN: server did not agree on a protocol. Uses default.
+* Server certificate:
+*  subject: jurisdictionC=US; jurisdictionST=Delaware; businessCategory=Private Organization; serialNumber=2419959; C=US; ST=Virginia; L=McLean; O=Capital One Financial Corporation; CN=api.capitalone.com
+*  start date: Jul 31 00:00:00 2024 GMT
+*  expire date: Jul 31 23:59:59 2025 GMT
+*  issuer: C=US; O=DigiCert Inc; CN=DigiCert EV RSA CA G2
+*  SSL certificate verify result: self-signed certificate in certificate chain (19), continuing anyway.
+*   Certificate level 0: Public key type RSA (2048/112 Bits/secBits), signed using sha256WithRSAEncryption
+*   Certificate level 1: Public key type RSA (2048/112 Bits/secBits), signed using sha256WithRSAEncryption
+*   Certificate level 2: Public key type RSA (2048/112 Bits/secBits), signed using sha256WithRSAEncryption
+* using HTTP/1.x
+} [5 bytes data]
+> GET /accounts/v99999/accounts/99999 HTTP/1.1
+> Host: api.capitalone.com
+> User-Agent: curl/8.5.0
+> Accept: */*
+> 
+{ [5 bytes data]
+< HTTP/1.1 403 Forbidden
+< Date: Sat, 21 Jun 2025 13:30:13 GMT
+< Content-Type: application/json
+< Transfer-Encoding: chunked
+< Connection: keep-alive
+< 
+{ [109 bytes data]
+* Connection #0 to host api.capitalone.com left intact
+{"code":101305,"description":"Access forbidden. No CN/Api-Key available|No matching endpoint anonymous app"}
+
+
+
