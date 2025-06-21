@@ -1,0 +1,53 @@
+===== Testing: https://api.capitalone.com/users/v1/users/1234/address =====
+[+] HTTP Methods Test
+HTTP/1.1 400 Bad Request
+Date: Sat, 21 Jun 2025 13:00:26 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+
+
+
+[+] Headers Analysis
+HTTP/1.1 403 Forbidden
+Date: Sat, 21 Jun 2025 13:00:27 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+
+
+
+[+] IDOR Test
+{"code":101305,"description":"Access forbidden. No CN/Api-Key available|No matching endpoint anonymous app"}
+
+
+===== Testing: https://secure.capitalone.com/auth/oidc/token =====
+[+] HTTP Methods Test
+
+
+[+] Headers Analysis
+
+
+===== Testing: https://api.capitalone.com/accounts/v1/accounts/5678/transactions =====
+[+] HTTP Methods Test
+HTTP/1.1 400 Bad Request
+Date: Sat, 21 Jun 2025 13:00:29 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+
+
+
+[+] Headers Analysis
+HTTP/1.1 403 Forbidden
+Date: Sat, 21 Jun 2025 13:00:30 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+
+
+
+[+] IDOR Test
+{"description":"Access forbidden. No CN/Api-Key available|No matching endpoint anonymous app","code":101305}
+
+
