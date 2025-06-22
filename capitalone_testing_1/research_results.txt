@@ -1,0 +1,559 @@
+
+
+# HEAD Requests Analysis
+# Sun Jun 22 10:13:15 PM EEST 2025
+
+$ curl -I -X HEAD --connect-timeout 10 -A 'ResearchBot/1.0' 'https://api.capitalone.com/user/profile'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0
+HTTP/1.1 403 Forbidden
+Date: Sun, 22 Jun 2025 19:13:16 GMT
+Content-Type: application/json
+Connection: keep-alive
+
+
+$ curl -I -X HEAD --connect-timeout 10 -A 'ResearchBot/1.0' 'https://onlinebanking.capitalone.com/session'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0curl: (6) Could not resolve host: onlinebanking.capitalone.com
+
+$ curl -I -X HEAD --connect-timeout 10 -A 'ResearchBot/1.0' 'https://apply.capitalone.com/application'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0
+HTTP/1.1 403 Forbidden
+Content-Type: application/xml
+Connection: keep-alive
+Server: AmazonS3
+Date: Sun, 22 Jun 2025 19:13:17 GMT
+X-Cache: Error from cloudfront
+Via: 1.1 9c94d22ba79ef80e6c212591a80a29b6.cloudfront.net (CloudFront)
+X-Amz-Cf-Pop: OTP50-P1
+X-Amz-Cf-Id: 9kZ_Kgwxj-EhiBKD1_iIFSTDbQN16jc17WCTEw33Goi6IJE4hk39fg==
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: SAMEORIGIN
+Referrer-Policy: strict-origin-when-cross-origin
+X-Content-Type-Options: nosniff
+Strict-Transport-Security: max-age=31536000
+
+
+$ curl -I -X HEAD --connect-timeout 10 -A 'ResearchBot/1.0' 'https://support.capitalone.com/tickets'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0curl: (6) Could not resolve host: support.capitalone.com
+
+$ curl -I -X HEAD --connect-timeout 10 -A 'ResearchBot/1.0' 'https://mobile.capitalone.com/config'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0    76    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0    76    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+HTTP/2 404 
+content-type: application/json
+content-length: 76
+date: Sun, 22 Jun 2025 19:13:19 GMT
+x-janus-response-latency: 0
+x-cache: Error from cloudfront
+via: 1.1 30abfc1be84560e539cfe794c5d140a2.cloudfront.net (CloudFront)
+x-amz-cf-pop: OTP50-P1
+alt-svc: h3=":443"; ma=86400
+x-amz-cf-id: fC84801Bed0WfUbId4mUcAhv9IkdCaQuY1Pcs7QPJeBOEq_yrCT3sQ==
+x-xss-protection: 1; mode=block
+x-frame-options: SAMEORIGIN
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+strict-transport-security: max-age=31622400; includeSubDomains
+
+
+
+# HTTP Method Testing
+# Sun Jun 22 10:13:19 PM EEST 2025
+
+$ curl -I -X GET --connect-timeout 10 -A 'ResearchBot/1.0' 'https://api.capitalone.com/user/profile'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+HTTP/1.1 403 Forbidden
+Date: Sun, 22 Jun 2025 19:13:20 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+
+
+$ curl -I -X POST --connect-timeout 10 -A 'ResearchBot/1.0' 'https://api.capitalone.com/user/profile'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+HTTP/1.1 404 Not Found
+Date: Sun, 22 Jun 2025 19:13:20 GMT
+Content-Type: text/html
+Transfer-Encoding: chunked
+Connection: keep-alive
+
+
+$ curl -I -X PUT --connect-timeout 10 -A 'ResearchBot/1.0' 'https://api.capitalone.com/user/profile'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+HTTP/1.1 403 Forbidden
+Date: Sun, 22 Jun 2025 19:13:21 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+
+
+$ curl -I -X DELETE --connect-timeout 10 -A 'ResearchBot/1.0' 'https://api.capitalone.com/user/profile'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+HTTP/1.1 403 Forbidden
+Date: Sun, 22 Jun 2025 19:13:22 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+
+
+$ curl -I -X PATCH --connect-timeout 10 -A 'ResearchBot/1.0' 'https://api.capitalone.com/user/profile'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+HTTP/1.1 403 Forbidden
+Date: Sun, 22 Jun 2025 19:13:23 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+
+
+$ curl -I -X GET --connect-timeout 10 -A 'ResearchBot/1.0' 'https://onlinebanking.capitalone.com/session'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0curl: (6) Could not resolve host: onlinebanking.capitalone.com
+
+$ curl -I -X POST --connect-timeout 10 -A 'ResearchBot/1.0' 'https://onlinebanking.capitalone.com/session'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0curl: (6) Could not resolve host: onlinebanking.capitalone.com
+
+$ curl -I -X PUT --connect-timeout 10 -A 'ResearchBot/1.0' 'https://onlinebanking.capitalone.com/session'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0curl: (6) Could not resolve host: onlinebanking.capitalone.com
+
+$ curl -I -X DELETE --connect-timeout 10 -A 'ResearchBot/1.0' 'https://onlinebanking.capitalone.com/session'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0curl: (6) Could not resolve host: onlinebanking.capitalone.com
+
+$ curl -I -X PATCH --connect-timeout 10 -A 'ResearchBot/1.0' 'https://onlinebanking.capitalone.com/session'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0curl: (6) Could not resolve host: onlinebanking.capitalone.com
+
+$ curl -I -X GET --connect-timeout 10 -A 'ResearchBot/1.0' 'https://apply.capitalone.com/application'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+HTTP/1.1 403 Forbidden
+Content-Type: application/xml
+Transfer-Encoding: chunked
+Connection: keep-alive
+Server: AmazonS3
+Date: Sun, 22 Jun 2025 19:13:23 GMT
+X-Cache: Error from cloudfront
+Via: 1.1 5d44c2f59edba6a173ab662a8654ed3e.cloudfront.net (CloudFront)
+X-Amz-Cf-Pop: OTP50-P1
+X-Amz-Cf-Id: DI5GK-a-MijnwJtd1NZ5ypEnLinG8g9X4T1Cn9eeYmWXsxXL6OPwYw==
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: SAMEORIGIN
+Referrer-Policy: strict-origin-when-cross-origin
+X-Content-Type-Options: nosniff
+Strict-Transport-Security: max-age=31536000
+
+
+$ curl -I -X POST --connect-timeout 10 -A 'ResearchBot/1.0' 'https://apply.capitalone.com/application'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:04 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:05 --:--:--     0  0  1053    0     0    0     0      0      0 --:--:--  0:00:05 --:--:--     0
+HTTP/1.1 403 Forbidden
+Server: CloudFront
+Date: Sun, 22 Jun 2025 19:13:29 GMT
+Content-Type: text/html
+Content-Length: 1053
+Connection: keep-alive
+X-Cache: Error from cloudfront
+Via: 1.1 923a6c97ce9c1902a6886df0070028f2.cloudfront.net (CloudFront)
+X-Amz-Cf-Pop: OTP50-P1
+X-Amz-Cf-Id: Ri_i-hfn72XVYDeO20iGKbJkP-sDBNo4ihHqm-RrcpeZv3MIav5bMw==
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: SAMEORIGIN
+Referrer-Policy: strict-origin-when-cross-origin
+X-Content-Type-Options: nosniff
+Strict-Transport-Security: max-age=31536000
+
+
+$ curl -I -X PUT --connect-timeout 10 -A 'ResearchBot/1.0' 'https://apply.capitalone.com/application'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0  1053    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+HTTP/1.1 403 Forbidden
+Server: CloudFront
+Date: Sun, 22 Jun 2025 19:13:29 GMT
+Content-Type: text/html
+Content-Length: 1053
+Connection: keep-alive
+X-Cache: Error from cloudfront
+Via: 1.1 8e0ad4a8600f5f24082d25a13a356692.cloudfront.net (CloudFront)
+X-Amz-Cf-Pop: OTP50-P1
+X-Amz-Cf-Id: F8GCtnVqzvuRES_54b7PFHGEYwTKy-gB24RMJz7u-W7uyLHtBD9TCQ==
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: SAMEORIGIN
+Referrer-Policy: strict-origin-when-cross-origin
+X-Content-Type-Options: nosniff
+Strict-Transport-Security: max-age=31536000
+
+
+$ curl -I -X DELETE --connect-timeout 10 -A 'ResearchBot/1.0' 'https://apply.capitalone.com/application'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0  1053    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+HTTP/1.1 403 Forbidden
+Server: CloudFront
+Date: Sun, 22 Jun 2025 19:13:29 GMT
+Content-Type: text/html
+Content-Length: 1053
+Connection: keep-alive
+X-Cache: Error from cloudfront
+Via: 1.1 3611820b1e077d50b36d6d931cabca5a.cloudfront.net (CloudFront)
+X-Amz-Cf-Pop: OTP50-P1
+X-Amz-Cf-Id: GOV8mJra6JphhEN2ueByxNKVHNz8PQIqmLzME31wO2fTQ7kK--_lRA==
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: SAMEORIGIN
+Referrer-Policy: strict-origin-when-cross-origin
+X-Content-Type-Options: nosniff
+Strict-Transport-Security: max-age=31536000
+
+
+$ curl -I -X PATCH --connect-timeout 10 -A 'ResearchBot/1.0' 'https://apply.capitalone.com/application'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0  1053    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+HTTP/1.1 403 Forbidden
+Server: CloudFront
+Date: Sun, 22 Jun 2025 19:13:29 GMT
+Content-Type: text/html
+Content-Length: 1053
+Connection: keep-alive
+X-Cache: Error from cloudfront
+Via: 1.1 c434343f9af2c6057d927f6aca410216.cloudfront.net (CloudFront)
+X-Amz-Cf-Pop: OTP50-P1
+X-Amz-Cf-Id: 0ukdLdH5WIzgplg0dJfUE2byiu0rjFBh766QrJ2mPQKKOMlH7TjQXQ==
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: SAMEORIGIN
+Referrer-Policy: strict-origin-when-cross-origin
+X-Content-Type-Options: nosniff
+Strict-Transport-Security: max-age=31536000
+
+
+$ curl -I -X GET --connect-timeout 10 -A 'ResearchBot/1.0' 'https://support.capitalone.com/tickets'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0curl: (6) Could not resolve host: support.capitalone.com
+
+$ curl -I -X POST --connect-timeout 10 -A 'ResearchBot/1.0' 'https://support.capitalone.com/tickets'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0curl: (6) Could not resolve host: support.capitalone.com
+
+$ curl -I -X PUT --connect-timeout 10 -A 'ResearchBot/1.0' 'https://support.capitalone.com/tickets'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0curl: (6) Could not resolve host: support.capitalone.com
+
+$ curl -I -X DELETE --connect-timeout 10 -A 'ResearchBot/1.0' 'https://support.capitalone.com/tickets'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0curl: (6) Could not resolve host: support.capitalone.com
+
+$ curl -I -X PATCH --connect-timeout 10 -A 'ResearchBot/1.0' 'https://support.capitalone.com/tickets'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0curl: (6) Could not resolve host: support.capitalone.com
+
+$ curl -I -X GET --connect-timeout 10 -A 'ResearchBot/1.0' 'https://mobile.capitalone.com/config'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+HTTP/2 404 
+content-type: application/json
+date: Sun, 22 Jun 2025 19:13:30 GMT
+x-janus-response-latency: 1
+x-cache: Error from cloudfront
+via: 1.1 30abfc1be84560e539cfe794c5d140a2.cloudfront.net (CloudFront)
+x-amz-cf-pop: OTP50-P1
+alt-svc: h3=":443"; ma=86400
+x-amz-cf-id: vT4n7bfksfrEcD3ioLm2YBnbTb5ynMJHraKWDnJFnGjOKBPjp7PIqw==
+x-xss-protection: 1; mode=block
+x-frame-options: SAMEORIGIN
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+strict-transport-security: max-age=31622400; includeSubDomains
+
+
+$ curl -I -X POST --connect-timeout 10 -A 'ResearchBot/1.0' 'https://mobile.capitalone.com/config'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+HTTP/2 404 
+content-type: application/json
+date: Sun, 22 Jun 2025 19:13:31 GMT
+x-janus-response-latency: 0
+x-cache: Error from cloudfront
+via: 1.1 30f34c4ade43b29ffd4cdc2465cd5c42.cloudfront.net (CloudFront)
+x-amz-cf-pop: OTP50-P1
+alt-svc: h3=":443"; ma=86400
+x-amz-cf-id: x9FULRw2lfg8x4nV1UEGTNIUi_1mEozhPYxkA69TKsKXiWgXeAX7wA==
+x-xss-protection: 1; mode=block
+x-frame-options: SAMEORIGIN
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+strict-transport-security: max-age=31622400; includeSubDomains
+
+
+$ curl -I -X PUT --connect-timeout 10 -A 'ResearchBot/1.0' 'https://mobile.capitalone.com/config'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+HTTP/2 404 
+content-type: application/json
+date: Sun, 22 Jun 2025 19:13:31 GMT
+x-janus-response-latency: 0
+x-cache: Error from cloudfront
+via: 1.1 3bc7ecd5aee04a4d3c660b552dad8d14.cloudfront.net (CloudFront)
+x-amz-cf-pop: OTP50-P1
+alt-svc: h3=":443"; ma=86400
+x-amz-cf-id: jZL6OydUP66T2bXxNTb_7eSdI9XZmycoDK0kzc45yuBMNfKwKXDLxA==
+x-xss-protection: 1; mode=block
+x-frame-options: SAMEORIGIN
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+strict-transport-security: max-age=31622400; includeSubDomains
+
+
+$ curl -I -X DELETE --connect-timeout 10 -A 'ResearchBot/1.0' 'https://mobile.capitalone.com/config'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+HTTP/2 404 
+content-type: application/json
+date: Sun, 22 Jun 2025 19:13:31 GMT
+x-janus-response-latency: 0
+x-cache: Error from cloudfront
+via: 1.1 a58780d22b5e142a1e7e092cfb4a356c.cloudfront.net (CloudFront)
+x-amz-cf-pop: OTP50-P1
+alt-svc: h3=":443"; ma=86400
+x-amz-cf-id: MbhtCPqYaOrGhDZEjGGAtmBXXmIQobQul3-7cnA-8paC-IwTlYx_5g==
+x-xss-protection: 1; mode=block
+x-frame-options: SAMEORIGIN
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+strict-transport-security: max-age=31622400; includeSubDomains
+
+
+$ curl -I -X PATCH --connect-timeout 10 -A 'ResearchBot/1.0' 'https://mobile.capitalone.com/config'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+HTTP/2 404 
+content-type: application/json
+date: Sun, 22 Jun 2025 19:13:32 GMT
+x-janus-response-latency: 0
+x-cache: Error from cloudfront
+via: 1.1 84494925196597f7a73e04b453070b2e.cloudfront.net (CloudFront)
+x-amz-cf-pop: OTP50-P1
+alt-svc: h3=":443"; ma=86400
+x-amz-cf-id: SQjwzKl7ZomMjTu-t_fcMjtpCfa8cRWRah5vYALKIWcAdAE_euwfBg==
+x-xss-protection: 1; mode=block
+x-frame-options: SAMEORIGIN
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+strict-transport-security: max-age=31622400; includeSubDomains
+
+
+
+# Security Headers Check
+# Sun Jun 22 10:13:32 PM EEST 2025
+
+$ curl -I --connect-timeout 10 -A 'ResearchBot/1.0' 'https://api.capitalone.com/user/profile' | grep -iE 'strict-transport-security|x-frame-options|x-xss-protection|x-content-type-options|content-security-policy'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+
+$ curl -I --connect-timeout 10 -A 'ResearchBot/1.0' 'https://onlinebanking.capitalone.com/session' | grep -iE 'strict-transport-security|x-frame-options|x-xss-protection|x-content-type-options|content-security-policy'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0curl: (6) Could not resolve host: onlinebanking.capitalone.com
+
+$ curl -I --connect-timeout 10 -A 'ResearchBot/1.0' 'https://apply.capitalone.com/application' | grep -iE 'strict-transport-security|x-frame-options|x-xss-protection|x-content-type-options|content-security-policy'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+Strict-Transport-Security: max-age=31536000
+
+$ curl -I --connect-timeout 10 -A 'ResearchBot/1.0' 'https://support.capitalone.com/tickets' | grep -iE 'strict-transport-security|x-frame-options|x-xss-protection|x-content-type-options|content-security-policy'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0curl: (6) Could not resolve host: support.capitalone.com
+
+$ curl -I --connect-timeout 10 -A 'ResearchBot/1.0' 'https://mobile.capitalone.com/config' | grep -iE 'strict-transport-security|x-frame-options|x-xss-protection|x-content-type-options|content-security-policy'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0    76    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+x-xss-protection: 1; mode=block
+x-frame-options: SAMEORIGIN
+x-content-type-options: nosniff
+strict-transport-security: max-age=31622400; includeSubDomains
+
+
+# Parameter Testing
+# Sun Jun 22 10:13:34 PM EEST 2025
+
+$ curl -X POST --connect-timeout 10 -A 'ResearchBot/1.0' -d 'test=1&debug=true&admin=false' 'https://api.capitalone.com/user/profile'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   138    0   109  100    29    169     44 --:--:-- --:--:-- --:--:--   214
+{"description":"Access forbidden. No CN/Api-Key available|No matching endpoint anonymous app","code":101305}
+
+$ curl -X POST --connect-timeout 10 -A 'ResearchBot/1.0' -d 'test=1&debug=true&admin=false' 'https://onlinebanking.capitalone.com/session'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0curl: (6) Could not resolve host: onlinebanking.capitalone.com
+
+$ curl -X POST --connect-timeout 10 -A 'ResearchBot/1.0' -d 'test=1&debug=true&admin=false' 'https://apply.capitalone.com/application'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  1082  100  1053  100    29  14279    393 --:--:-- --:--:-- --:--:-- 14621
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+This distribution is not configured to allow the HTTP request method that was used for this request. The distribution supports only cachable requests.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again later, or contact the app or website owner.
+<BR clear="all">
+If you provide content to customers through CloudFront, you can find steps to troubleshoot and help prevent this error by reviewing the CloudFront documentation.
+<BR clear="all">
+<HR noshade size="1px">
+<PRE>
+Generated by cloudfront (CloudFront)
+Request ID: 9TGj2BvgVDwT2FXAdesencuS8GSwJXnIQJGfDF2i1tNAV6P2BC_ZVg==
+</PRE>
+<ADDRESS>
+</ADDRESS>
+</BODY></HTML>
+$ curl -X POST --connect-timeout 10 -A 'ResearchBot/1.0' -d 'test=1&debug=true&admin=false' 'https://support.capitalone.com/tickets'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0curl: (6) Could not resolve host: support.capitalone.com
+
+$ curl -X POST --connect-timeout 10 -A 'ResearchBot/1.0' -d 'test=1&debug=true&admin=false' 'https://mobile.capitalone.com/config'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   105    0    76  100    29    359    137 --:--:-- --:--:-- --:--:--   497
+{"id": "404", "text": "Invalid Request", "developerText": "Invalid Request"}
+
+# Redirect Analysis
+# Sun Jun 22 10:13:35 PM EEST 2025
+
+$ curl -I --connect-timeout 10 -A 'ResearchBot/1.0' -L 'https://api.capitalone.com/user/profile'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+HTTP/1.1 403 Forbidden
+Date: Sun, 22 Jun 2025 19:13:36 GMT
+Content-Type: application/json
+Connection: keep-alive
+
+
+$ curl -I --connect-timeout 10 -A 'ResearchBot/1.0' -L 'https://onlinebanking.capitalone.com/session'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0curl: (6) Could not resolve host: onlinebanking.capitalone.com
+
+$ curl -I --connect-timeout 10 -A 'ResearchBot/1.0' -L 'https://apply.capitalone.com/application'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0
+HTTP/1.1 403 Forbidden
+Content-Type: application/xml
+Connection: keep-alive
+Server: AmazonS3
+Date: Sun, 22 Jun 2025 19:13:37 GMT
+X-Cache: Error from cloudfront
+Via: 1.1 a58780d22b5e142a1e7e092cfb4a356c.cloudfront.net (CloudFront)
+X-Amz-Cf-Pop: OTP50-P1
+X-Amz-Cf-Id: 6iPhvhEyeLxOtAWeaz3TlEs3qB0yYrFJhcpmNT4PAOIUQMhB7-cAqQ==
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: SAMEORIGIN
+Referrer-Policy: strict-origin-when-cross-origin
+X-Content-Type-Options: nosniff
+Strict-Transport-Security: max-age=31536000
+
+
+$ curl -I --connect-timeout 10 -A 'ResearchBot/1.0' -L 'https://support.capitalone.com/tickets'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0curl: (6) Could not resolve host: support.capitalone.com
+
+$ curl -I --connect-timeout 10 -A 'ResearchBot/1.0' -L 'https://mobile.capitalone.com/config'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0    76    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+HTTP/2 404 
+content-type: application/json
+content-length: 76
+date: Sun, 22 Jun 2025 19:13:37 GMT
+x-janus-response-latency: 0
+x-cache: Error from cloudfront
+via: 1.1 4faccde4f27450cdd8c87db9004d8fe0.cloudfront.net (CloudFront)
+x-amz-cf-pop: OTP50-P1
+alt-svc: h3=":443"; ma=86400
+x-amz-cf-id: 3OO6OVcwAk2T6QbQtZRtFIqDZHAxqzwWXc4srk-hgystP2_usaBNhA==
+x-xss-protection: 1; mode=block
+x-frame-options: SAMEORIGIN
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+strict-transport-security: max-age=31622400; includeSubDomains
+
+
+
+# JavaScript Analysis
+# Sun Jun 22 10:13:37 PM EEST 2025
+
+$ curl --connect-timeout 10 -A 'ResearchBot/1.0' 'https://onlinebanking.capitalone.com/static/js/main.js' | grep -iE 'apiKey|secret|token|password'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0curl: (6) Could not resolve host: onlinebanking.capitalone.com
+
+$ curl --connect-timeout 10 -A 'ResearchBot/1.0' 'https://mobile.capitalone.com/static/js/app.js' | grep -iE 'apiKey|secret|token|password'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    76  100    76    0     0    209      0 --:--:-- --:--:-- --:--:--   209
+
+
+# Config File Checking
+# Sun Jun 22 10:13:38 PM EEST 2025
+
+$ curl --connect-timeout 10 -A 'ResearchBot/1.0' 'https://api.capitalone.com/config.json'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   109    0   109    0     0    171      0 --:--:-- --:--:-- --:--:--   171
+{"description":"Access forbidden. No CN/Api-Key available|No matching endpoint anonymous app","code":101305}
+
+$ curl --connect-timeout 10 -A 'ResearchBot/1.0' 'https://onlinebanking.capitalone.com/settings.xml'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0curl: (6) Could not resolve host: onlinebanking.capitalone.com
