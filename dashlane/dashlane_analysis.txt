@@ -1,3 +1,23 @@
-Checking for open access...
-404
-Searching for sensitive data in logs...
+=== Проверка доступности поддомена ===
+Команда: curl -s -o /dev/null -w '%{http_code}' https://logs.dashlane.com/
+Результат: 404
+
+=== Проверка наличия чувствительных данных ===
+Команда: curl -s -I https://logs.dashlane.com/
+HTTP/2 404 
+date: Thu, 26 Jun 2025 17:11:39 GMT
+content-type: text/plain
+strict-transport-security: max-age=31536000
+
+
+=== Проверка заголовков и технологий ===
+Команда: curl -s -D - https://logs.dashlane.com/ -o /dev/null
+HTTP/2 404 
+date: Thu, 26 Jun 2025 17:11:39 GMT
+content-type: text/plain
+strict-transport-security: max-age=31536000
+
+
+=== Поиск ссылок на внутренние API или ресурсы ===
+Команда: curl -s https://logs.dashlane.com/ | grep -E 'api|internal|admin'
+
