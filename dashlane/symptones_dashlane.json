@@ -1,12 +1,6 @@
 [
   {
     "quote": "https://logs.dashlane.com/",
-    "capec_style_description": "Exposed logging endpoint accessible via HTTPS."
-  },
-
-  {
-    "quote": "терминал сразу же закрылся, а в файле остались только эти результаты:\nChecking for open access...\n404\nSearching for sensitive data in logs...",
-    "capec_style_description": "Log endpoint returns HTTP 404 (Not Found) status code."
+    "capec_style_description": "Наличие открытого URL, ведущего к поддомену, связанному с логированием (logs)."
   }
-
 ]
